@@ -14,3 +14,7 @@ Add libs and include to project
 Add libs and include to Game project
 
 And just press button build
+
+
+
+Based on https://github.com/TrinityCore/TrinityCore
