@@ -93,7 +93,7 @@ CREATE TABLE `log_boss_kill` (
   `damage_reflect` bigint(20) DEFAULT NULL,
   `damage_debuff` bigint(20) DEFAULT NULL,
   `damage_elemental` bigint(20) DEFAULT NULL,
-  `log_boss_kill.server` smallint(6) DEFAULT NULL,
+  `server` smallint(6) DEFAULT NULL,
   `first_hit` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -332,8 +332,8 @@ CREATE TABLE `log_jewel_drop` (
   `jewel_index` smallint(6) DEFAULT NULL,
   `jewel_name` varchar(255) DEFAULT NULL,
   `world` smallint(6) DEFAULT NULL,
-  `log_jewel_drop.x` smallint(6) DEFAULT NULL,
-  `log_jewel_drop.y` smallint(6) DEFAULT NULL
+  `x` smallint(6) DEFAULT NULL,
+  `y` smallint(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
