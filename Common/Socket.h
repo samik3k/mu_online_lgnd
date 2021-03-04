@@ -83,9 +83,9 @@ public:
             return;
 
         _readBuffer.Normalize();
-		_readBuffer.EnsureFreeSpace();
+		    _readBuffer.EnsureFreeSpace();
         _socket.async_read_some(boost::asio::buffer(_readBuffer.GetWritePointer(), _readBuffer.GetRemainingSpace()),
-            std::bind(&Socket<T>::ReadHandlerInternal, this->shared_from_this(), std::placeholders::_1, std::placeholders::_2));
+        std::bind(&Socket<T>::ReadHandlerInternal, this->shared_from_this(), std::placeholders::_1, std::placeholders::_2));
     }
 
 	void QueuePacket(uint8 * packet, uint16 size)
@@ -145,7 +145,7 @@ public:
     MessageBuffer& GetReadBuffer() { return _readBuffer; }
 
 protected:
-	virtual void OnClose() { }
+    virtual void OnClose() { }
 
     virtual void ReadHandler() = 0;
 
@@ -168,14 +168,14 @@ protected:
         return false;
     }
 
-	void SetNoDelay(bool enable)
-    {
-        boost::system::error_code err;
-        _socket.set_option(boost::asio::ip::tcp::no_delay(enable), err);
-        if (err)
-            sLog->outInfo("root", "Socket::SetNoDelay: failed to set_option(boost::asio::ip::tcp::no_delay) for %s - %d (%s)",
-                GetRemoteIpAddress().to_string().c_str(), err.value(), err.message().c_str());
-    }
+	  void SetNoDelay(bool enable)
+      {
+          boost::system::error_code err;
+          _socket.set_option(boost::asio::ip::tcp::no_delay(enable), err);
+          if (err)
+              sLog->outInfo("root", "Socket::SetNoDelay: failed to set_option(boost::asio::ip::tcp::no_delay) for %s - %d (%s)",
+                  GetRemoteIpAddress().to_string().c_str(), err.value(), err.message().c_str());
+      }
 
     std::mutex _writeLock;
     std::queue<MessageBuffer> _writeQueue;
@@ -183,7 +183,8 @@ protected:
     MessageBuffer _writeBuffer;
 #endif
 
-	boost::asio::io_service& io_service() { return _socket.get_io_service(); }
+    //boost::asio::io_service& io_service() { return _socket.get_io_service(); }
+    //_socket.get_executor().context()
 
 private:
     void ReadHandlerInternal(boost::system::error_code error, size_t transferredBytes)
@@ -312,7 +313,7 @@ private:
     std::atomic<bool> _closing;
 
     bool _isWritingAsync;
-	uint32 _connectionIdle;
+    uint32 _connectionIdle;
 };
 
 #endif

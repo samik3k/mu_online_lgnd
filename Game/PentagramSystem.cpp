@@ -1270,6 +1270,18 @@ void PentagramSystem::ApplyErrtelOption(Player* pPlayer)
 			case 224:
 				pPlayer->GetPentagramJewelOption()->IncreaseElementalBlindness(value);
 				break;
+
+			case 243:
+				pPlayer->GetPentagramJewelOption()->IncreaseElementalSkillImmuneI(value);
+				break;
+
+			case 244:
+				pPlayer->GetPentagramJewelOption()->IncreaseElementalSkillImmuneII(value);
+				break;
+
+			case 245:
+				pPlayer->GetPentagramJewelOption()->IncreaseElementalSkillBerserkerI(value);
+				break;
 			}
 		}
 	}

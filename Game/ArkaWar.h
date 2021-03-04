@@ -115,8 +115,8 @@ static const struct ArkaWarZoneBattleData
 	{WORLD_ACHERON_BATTLE, 427, "Alkmar"},
 	{WORLD_ACHERON_BATTLE, 431, "Ubaid"},
 	{WORLD_DEVENTER_BATTLE, 439, "Debenter"},
-	{-1, -1, ""},
-	{-1, -1, ""}
+	{(uint16) -1, (uint16) -1, ""},
+	{(uint16) -1, (uint16) -1, ""}
 };
 
 struct ArkaWarObeliskAuraBasicData

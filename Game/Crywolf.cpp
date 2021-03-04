@@ -401,7 +401,7 @@ void Crywolf::ResetPlayerScore()
 class CrywolfScoreSort
 {
 public:
-	bool operator()(Player* pPlayer01, Player* pPlayer02)
+	bool operator()(Player* pPlayer01, Player* pPlayer02) const
 	{
 		SafeRAssert(pPlayer01, "pPlayer01 == nullptr", false);
 		SafeRAssert(pPlayer02, "pPlayer02 == nullptr", false);
@@ -478,7 +478,7 @@ void Crywolf::NotifyHeroList()
 	POINTER_PCT(CRYWOLF_HERO_LIST_HEAD, head, buffer, 0);
 	POINTER_PCT(CRYWOLF_HERO_LIST_BODY, body, buffer, sizeof(CRYWOLF_HERO_LIST_HEAD));
 	uint8 count = 0;
-	std::set<Player*,CrywolfScoreSort> HeroSet;
+	std::set<Player*, CrywolfScoreSort> HeroSet;
 
 	PlayerSessionMap const& character_map = sObjectMgr->GetAllCharacters();
 	for ( PlayerSessionMap::const_iterator it = character_map.begin(); it != character_map.end(); ++it )

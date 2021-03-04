@@ -4,6 +4,8 @@
 #ifdef _STLPORT_VERSION
 #define UNORDERED_MAP std::hash_map
 using std::hash_map;
+#elif COMPILER == COMPILER_MICROSOFT && _MSC_VER >= 1600 // VS100
+#define UNORDERED_MAP std::unordered_map
 #elif COMPILER == COMPILER_MICROSOFT && _MSC_VER >= 1500 && _HAS_TR1
 #define UNORDERED_MAP std::tr1::unordered_map
 #elif COMPILER == COMPILER_MICROSOFT && _MSC_VER >= 1300

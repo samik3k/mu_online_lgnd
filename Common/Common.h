@@ -21,7 +21,9 @@
 
 #define I32FMT "%08I32X"
 #define I64FMT "%016I64X"
+#if _MSC_VER < 1900
 #define snprintf _snprintf
+#endif
 #define atoll __atoi64
 #define vsnprintf _vsnprintf
 #define finite(X) _finite(X)
@@ -149,7 +151,9 @@
 
 #define GET_MAX_WORD_VALUE(x) (((x)>65000)?65000:((uint16)(x)))
 
+#if _MSC_VER < 1900
 #define snprintf _snprintf
+#endif
 #define vsnprintf _vsnprintf
 #define finite(X) _finite(X)
 

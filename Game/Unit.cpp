@@ -5159,14 +5159,14 @@ bool Unit::AttackElemental(Unit* pTarget, Skill* pSkill, bool magic_send, int32 
 			pVictim->AddBuff(BUFF_BASTION, pVictim->GetPentagramJewelOption()->GetElementalBastionDuration(), 0, this);
 		}
 
-		if (pVictim->GetPentagramJewelOption()->GetElementalSkillInmuneI() > 0 && !pVictim->HasBuff(BUFF_ERRTEL_IMMUNE_I) && roll_chance_i(sGameServer->GetSkillElementalImmuneI()))
+		if (pVictim->GetPentagramJewelOption()->GetElementalSkillImmuneI() > 0 && !pVictim->HasBuff(BUFF_ERRTEL_IMMUNE_I) && roll_chance_i(sGameServer->GetSkillElementalImmuneI()))
 		{
-			pVictim->AddBuff(BUFF_ERRTEL_IMMUNE_I, pVictim->GetPentagramJewelOption()->GetElementalSkillInmuneI(), 0, pVictim);
+			pVictim->AddBuff(BUFF_ERRTEL_IMMUNE_I, pVictim->GetPentagramJewelOption()->GetElementalSkillImmuneI(), 0, pVictim);
 		}
 
-		if (pVictim->GetPentagramJewelOption()->GetElementalSkillInmuneII() > 0 && !pVictim->HasBuff(BUFF_ERRTEL_IMMUNE_II) && roll_chance_i(sGameServer->GetSkillElementalImmuneII()))
+		if (pVictim->GetPentagramJewelOption()->GetElementalSkillImmuneII() > 0 && !pVictim->HasBuff(BUFF_ERRTEL_IMMUNE_II) && roll_chance_i(sGameServer->GetSkillElementalImmuneII()))
 		{
-			pVictim->AddBuff(BUFF_ERRTEL_IMMUNE_II, pVictim->GetPentagramJewelOption()->GetElementalSkillInmuneII(), 0, pVictim);
+			pVictim->AddBuff(BUFF_ERRTEL_IMMUNE_II, pVictim->GetPentagramJewelOption()->GetElementalSkillImmuneII(), 0, pVictim);
 		}
 
 		if (pVictim->GetPentagramJewelOption()->GetElementalSkillBerserkerI() > 0 && !pVictim->HasBuff(BUFF_ERRTEL_BERSERKER_I) && roll_chance_i(sGameServer->GetSkillElementalBerserkerI()))

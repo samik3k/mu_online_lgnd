@@ -1150,6 +1150,9 @@ struct PentagramJewelOption
 	DECLARE_PROPERTY(int32, ElementalBindingRate);
 	DECLARE_PROPERTY(int32, ElementalPunishRate);
 	DECLARE_PROPERTY(int32, ElementalBlindness);
+	DECLARE_PROPERTY(int32, ElementalSkillImmuneI);
+	DECLARE_PROPERTY(int32, ElementalSkillImmuneII);
+	DECLARE_PROPERTY(int32, ElementalSkillBerserkerI);
 
 	void Reset()
 	{
@@ -1182,6 +1185,9 @@ struct PentagramJewelOption
 		this->SetElementalBindingRate(0);
 		this->SetElementalPunishRate(0);
 		this->SetElementalBlindness(0);
+		this->SetElementalSkillImmuneI(0);
+		this->SetElementalSkillImmuneII(0);
+		this->SetElementalSkillBerserkerI(0);
 	}
 };
 

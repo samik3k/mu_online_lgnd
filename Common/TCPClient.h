@@ -36,7 +36,7 @@ class TCPClient
 			boost::asio::ip::tcp::endpoint endpoint(boost::asio::ip::address::from_string(ip), port);
 
 			_socket.async_connect(endpoint,
-				boost::bind(&TCPClient::OnConnect, this, _1));
+				boost::bind(&TCPClient::OnConnect, this, boost::placeholders::_1));
 		}
 
 		void Stop()
