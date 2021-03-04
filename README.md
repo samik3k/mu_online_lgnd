@@ -20,7 +20,11 @@ And just press button build
 Based on https://github.com/TrinityCore/TrinityCore
 
 Authors:
-www.mulgd.com Mu Legend
-http://forum.ragezone.com/f197/release-legend-mu-client-server-1195391/
+
+Mu Legend https://www.mulgd.com
+
+Release thread http://forum.ragezone.com/f197/release-legend-mu-client-server-1195391/
+
 mesosa http://forum.ragezone.com/members/842032.html
+
 Mulegend http://forum.ragezone.com/members/216381.html
