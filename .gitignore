@@ -30,4 +30,13 @@
 *.exe
 *.out
 *.app
+
+# VS2019 Files
 .vs
+
+# Temporary Folders
+/Common/Release
+/ConnectServer/Release
+/Game/Release
+/LoginServer/Release
+/Server_Link/Release
