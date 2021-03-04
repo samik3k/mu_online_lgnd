@@ -32,7 +32,7 @@ CREATE TABLE `antihack` (
   `player_location` varchar(255) DEFAULT NULL,
   `type` tinyint(4) DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,7 +64,7 @@ CREATE TABLE `item_bag_serial` (
   `world_x` smallint(6) DEFAULT NULL,
   `world_y` smallint(6) DEFAULT NULL,
   `instance` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -95,7 +95,7 @@ CREATE TABLE `log_boss_kill` (
   `damage_elemental` bigint(20) DEFAULT NULL,
   `server` smallint(6) DEFAULT NULL,
   `first_hit` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -129,7 +129,7 @@ CREATE TABLE `log_cash_shop` (
   `price_type` tinyint(4) DEFAULT NULL,
   `price` int(11) DEFAULT NULL,
   `gift` tinyint(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -160,7 +160,7 @@ CREATE TABLE `log_errtel_pentagram` (
   `result` tinyint(4) DEFAULT NULL,
   `pentagram_data` varchar(255) DEFAULT NULL,
   `errtel_data` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -188,7 +188,7 @@ CREATE TABLE `log_item_buy` (
   `player_data` varchar(255) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL,
   `comment` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -222,7 +222,7 @@ CREATE TABLE `log_item_create` (
   `item` smallint(6) DEFAULT NULL,
   `level` tinyint(4) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -250,7 +250,7 @@ CREATE TABLE `log_item_drop` (
   `player_data` varchar(255) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL,
   `comment` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -278,7 +278,7 @@ CREATE TABLE `log_item_loot` (
   `player_data` varchar(255) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL,
   `comment` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -306,7 +306,7 @@ CREATE TABLE `log_item_sell` (
   `player_data` varchar(255) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL,
   `comment` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -334,7 +334,7 @@ CREATE TABLE `log_jewel_drop` (
   `world` smallint(6) DEFAULT NULL,
   `x` smallint(6) DEFAULT NULL,
   `y` smallint(6) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -360,7 +360,7 @@ CREATE TABLE `log_jewel_mix` (
   `mix_type` tinyint(4) DEFAULT NULL,
   `mix_id` tinyint(4) DEFAULT NULL,
   `mix_level` tinyint(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -389,7 +389,7 @@ CREATE TABLE `log_level_up` (
   `world_x` smallint(6) DEFAULT NULL,
   `world_y` smallint(6) DEFAULT NULL,
   `event_ground` tinyint(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -422,7 +422,7 @@ CREATE TABLE `log_mix` (
   `result` tinyint(4) DEFAULT NULL,
   `item_data_before` varchar(255) DEFAULT NULL,
   `item_data_after` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -455,7 +455,7 @@ CREATE TABLE `log_personal_store` (
   `player_data_02` varchar(255) DEFAULT NULL,
   `offstore` tinyint(4) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -488,7 +488,7 @@ CREATE TABLE `log_pvp` (
   `skill` varchar(255) DEFAULT NULL,
   `hp_damage` int(11) DEFAULT NULL,
   `sd_damage` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -521,7 +521,7 @@ CREATE TABLE `log_trade` (
   `player_data_02` varchar(255) DEFAULT NULL,
   `money` int(11) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -549,7 +549,7 @@ CREATE TABLE `mix_recovery` (
   `player_data` varchar(255) DEFAULT NULL,
   `type` tinyint(4) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -577,7 +577,7 @@ CREATE TABLE `reward_dungeon` (
   `player_data` varchar(255) DEFAULT NULL,
   `type` tinyint(4) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -603,7 +603,7 @@ CREATE TABLE `reward_labyrinth_of_dimensions` (
   `category` tinyint(4) DEFAULT NULL,
   `rank` int(11) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

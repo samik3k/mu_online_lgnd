@@ -32,7 +32,7 @@ CREATE TABLE `accounts` (
   `account` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`guid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -56,7 +56,7 @@ CREATE TABLE `accounts_allowed` (
   `guid` int(11) DEFAULT NULL,
   `server` smallint(6) DEFAULT NULL,
   PRIMARY KEY (`account_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -80,7 +80,7 @@ CREATE TABLE `accounts_banned` (
   `guid` int(11) DEFAULT NULL,
   `unban_date` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`account_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -104,7 +104,7 @@ CREATE TABLE `accounts_disconnect` (
   `server` smallint(6) DEFAULT NULL,
   `masive` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`account_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -130,7 +130,7 @@ CREATE TABLE `accounts_security` (
   `mac` varchar(50) DEFAULT NULL,
   `disk_serial` int(11) DEFAULT NULL,
   PRIMARY KEY (`account_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -170,7 +170,7 @@ CREATE TABLE `accounts_status` (
   `disk_serial` int(11) DEFAULT NULL,
   `type` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`account_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -193,7 +193,7 @@ CREATE TABLE `accounts_validation` (
   `account_id` int(11) NOT NULL,
   `disk_serial` int(11) DEFAULT NULL,
   PRIMARY KEY (`account_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -217,7 +217,7 @@ CREATE TABLE `accounts_warning` (
   `disk_serial` int(11) DEFAULT NULL,
   `block_date` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`account_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -240,7 +240,7 @@ CREATE TABLE `block_diskserial` (
   `disk_serial` int(11) NOT NULL,
   `comment` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`disk_serial`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -263,7 +263,7 @@ CREATE TABLE `block_ip` (
   `ip` varchar(16) NOT NULL,
   `comment` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ip`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -286,7 +286,7 @@ CREATE TABLE `block_mac` (
   `mac` varchar(50) NOT NULL,
   `comment` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`mac`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -312,7 +312,7 @@ CREATE TABLE `character_notification` (
   `notification_id` varchar(45) DEFAULT NULL,
   `notification_data` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`server_group`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -336,7 +336,7 @@ CREATE TABLE `item_serial` (
   `serial` int(11) DEFAULT NULL,
   `serial_shop` int(11) DEFAULT NULL,
   PRIMARY KEY (`server`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -359,7 +359,7 @@ CREATE TABLE `master_pc` (
   `disk_serial` int(11) NOT NULL,
   `mac` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`disk_serial`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -391,7 +391,7 @@ CREATE TABLE `server_list` (
   `default_y` smallint(6) DEFAULT NULL,
   `type` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`server`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -415,7 +415,7 @@ CREATE TABLE `world_server` (
   `server` smallint(6) NOT NULL,
   `world` smallint(6) DEFAULT NULL,
   PRIMARY KEY (`server`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
