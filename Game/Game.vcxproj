@@ -57,11 +57,11 @@
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <IntrinsicFunctions>false</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>..\Common\;..\MySQL\;..\dep\ACE_wrappers;..\dep;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\boost\boost_1_75_0;C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.16.27023\atlmfc\include;..\Common\;..\MySQL\;..\dep\ACE_wrappers;..\dep;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PreprocessorDefinitions>ACE_AS_STATIC_LIBS;VERSION="0.17";WIN32;_WINDOWS;NDEBUG;__EXCEPTION_TRACER__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>GameServerPCH.h</PrecompiledHeaderFile>
       <WholeProgramOptimization>false</WholeProgramOptimization>
       <ForcedIncludeFiles>GameServerPCH.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
@@ -75,7 +75,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\Libraries\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\boost\boost_1_75_0\stage\lib;C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.16.27023\atlmfc\lib\x86;..\Libraries\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>Common.lib;ACE.lib;libmysql.lib;libeay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
       <GenerateMapFile>false</GenerateMapFile>
@@ -92,10 +92,10 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <IntrinsicFunctions>false</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>..\Common\;..\Dependencies\MySQL\include;..\Dependencies;C:\Boost_2013;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\boost\boost_1_75_0;C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.16.27023\atlmfc\include;..\Common\;..\Dependencies\MySQL\include;..\Dependencies;C:\Boost_2013;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;__EXCEPTION_TRACER__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>GamePCH.h</PrecompiledHeaderFile>
       <WholeProgramOptimization>false</WholeProgramOptimization>
       <ForcedIncludeFiles>GamePCH.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
@@ -114,7 +114,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\Libraries\;C:\Boost_2013\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\boost\boost_1_75_0\stage\lib;C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.16.27023\atlmfc\lib\x86;..\Libraries\;C:\Boost_2013\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>Common.lib;libmysql.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
       <LinkTimeCodeGeneration>
