@@ -27,7 +27,6 @@
 *.lib
 
 # Executables
-*.exe
 *.out
 *.app
 
@@ -40,3 +39,15 @@
 /Game/Release
 /LoginServer/Release
 /Server_Link/Release
+
+# Logs
+/Release/ServerLink_Log
+/Release/ConnectServer_Log
+/Release/GameServer_Log
+/Release/LoginServer_Log
+
+# Dev files
+/Release/*.pdb
+/Release/*.map
+
+/Release/ConnectServer.conf.dmp
