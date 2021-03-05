@@ -23,16 +23,16 @@ DROP TABLE IF EXISTS `antihack`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `antihack` (
-  `server` smallint(6) DEFAULT NULL,
-  `account_id` int(11) DEFAULT NULL,
+  `server` smallint(6) unsigned DEFAULT NULL,
+  `account_id` int(11) unsigned DEFAULT NULL,
   `account` varchar(255) DEFAULT NULL,
-  `char_id` int(11) DEFAULT NULL,
+  `char_id` int(11) unsigned DEFAULT NULL,
   `char_name` varchar(255) DEFAULT NULL,
   `player_data` varchar(255) DEFAULT NULL,
   `player_location` varchar(255) DEFAULT NULL,
-  `type` tinyint(4) DEFAULT NULL,
+  `type` tinyint(4) unsigned DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -52,19 +52,19 @@ DROP TABLE IF EXISTS `item_bag_serial`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `item_bag_serial` (
-  `serial` int(11) DEFAULT NULL,
-  `server` smallint(6) DEFAULT NULL,
+  `serial` int(11) unsigned DEFAULT NULL,
+  `server` smallint(6) unsigned DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
-  `level` tinyint(4) DEFAULT NULL,
-  `account_id` int(11) DEFAULT NULL,
+  `level` tinyint(4) unsigned DEFAULT NULL,
+  `account_id` int(11) unsigned DEFAULT NULL,
   `account` varchar(255) DEFAULT NULL,
-  `char_id` int(11) DEFAULT NULL,
+  `char_id` int(11) unsigned DEFAULT NULL,
   `char_name` varchar(255) DEFAULT NULL,
-  `world` smallint(6) DEFAULT NULL,
+  `world` smallint(6) unsigned DEFAULT NULL,
   `world_x` smallint(6) DEFAULT NULL,
   `world_y` smallint(6) DEFAULT NULL,
   `instance` int(11) DEFAULT NULL
-) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -84,18 +84,18 @@ DROP TABLE IF EXISTS `log_boss_kill`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_boss_kill` (
-  `boss_index` smallint(6) DEFAULT NULL,
+  `boss_index` smallint(6) unsigned DEFAULT NULL,
   `boss_name` varchar(255) DEFAULT NULL,
-  `boss_id` tinyint(4) DEFAULT NULL,
-  `character_id` int(11) DEFAULT NULL,
+  `boss_id` tinyint(4) unsigned DEFAULT NULL,
+  `character_id` int(11) unsigned DEFAULT NULL,
   `character_name` varchar(255) DEFAULT NULL,
   `damage` bigint(20) DEFAULT NULL,
   `damage_reflect` bigint(20) DEFAULT NULL,
   `damage_debuff` bigint(20) DEFAULT NULL,
   `damage_elemental` bigint(20) DEFAULT NULL,
-  `server` smallint(6) DEFAULT NULL,
+  `server` smallint(6) unsigned DEFAULT NULL,
   `first_hit` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -115,21 +115,21 @@ DROP TABLE IF EXISTS `log_cash_shop`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_cash_shop` (
-  `server_id` smallint(6) DEFAULT NULL,
-  `account_id` int(11) DEFAULT NULL,
+  `server_id` smallint(6) unsigned DEFAULT NULL,
+  `account_id` int(11) unsigned DEFAULT NULL,
   `account` varchar(255) DEFAULT NULL,
-  `char_id` int(11) DEFAULT NULL,
+  `char_id` int(11) unsigned DEFAULT NULL,
   `char_name` varchar(255) DEFAULT NULL,
   `player_data` varchar(255) DEFAULT NULL,
   `dest_char` varchar(255) DEFAULT NULL,
-  `package_id` int(11) DEFAULT NULL,
-  `product_id` int(11) DEFAULT NULL,
-  `option_id` int(11) DEFAULT NULL,
+  `package_id` int(11) unsigned DEFAULT NULL,
+  `product_id` int(11) unsigned DEFAULT NULL,
+  `option_id` int(11) unsigned DEFAULT NULL,
   `product_name` varchar(255) DEFAULT NULL,
-  `price_type` tinyint(4) DEFAULT NULL,
-  `price` int(11) DEFAULT NULL,
-  `gift` tinyint(4) DEFAULT NULL
-) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
+  `price_type` tinyint(4) unsigned DEFAULT NULL,
+  `price` int(11) unsigned DEFAULT NULL,
+  `gift` tinyint(4) unsigned DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -149,18 +149,18 @@ DROP TABLE IF EXISTS `log_errtel_pentagram`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_errtel_pentagram` (
-  `server` smallint(6) DEFAULT NULL,
-  `account_id` int(11) DEFAULT NULL,
+  `server` smallint(6) unsigned DEFAULT NULL,
+  `account_id` int(11) unsigned DEFAULT NULL,
   `account` varchar(255) DEFAULT NULL,
-  `char_id` int(11) DEFAULT NULL,
+  `char_id` int(11) unsigned DEFAULT NULL,
   `char_name` varchar(255) DEFAULT NULL,
   `player_data` varchar(255) DEFAULT NULL,
-  `type` tinyint(4) DEFAULT NULL,
-  `blessing_spirit` tinyint(4) DEFAULT NULL,
-  `result` tinyint(4) DEFAULT NULL,
+  `type` tinyint(4) unsigned DEFAULT NULL,
+  `blessing_spirit` tinyint(4) unsigned DEFAULT NULL,
+  `result` tinyint(4) unsigned DEFAULT NULL,
   `pentagram_data` varchar(255) DEFAULT NULL,
   `errtel_data` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -180,15 +180,15 @@ DROP TABLE IF EXISTS `log_item_buy`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_item_buy` (
-  `server` smallint(6) DEFAULT NULL,
-  `account_id` int(11) DEFAULT NULL,
+  `server` smallint(6) unsigned DEFAULT NULL,
+  `account_id` int(11) unsigned DEFAULT NULL,
   `account` varchar(255) DEFAULT NULL,
-  `char_id` int(11) DEFAULT NULL,
+  `char_id` int(11) unsigned DEFAULT NULL,
   `char_name` varchar(255) DEFAULT NULL,
   `player_data` varchar(255) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL,
   `comment` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -208,21 +208,21 @@ DROP TABLE IF EXISTS `log_item_create`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_item_create` (
-  `account_id` int(11) DEFAULT NULL,
+  `account_id` int(11) unsigned DEFAULT NULL,
   `account` varchar(255) DEFAULT NULL,
-  `char_id` int(11) DEFAULT NULL,
+  `char_id` int(11) unsigned DEFAULT NULL,
   `char_name` varchar(255) DEFAULT NULL,
   `interface_id` varchar(255) DEFAULT NULL,
-  `world` smallint(6) DEFAULT NULL,
+  `world` smallint(6) unsigned DEFAULT NULL,
   `world_x` smallint(6) DEFAULT NULL,
   `world_y` smallint(6) DEFAULT NULL,
-  `server` smallint(6) DEFAULT NULL,
-  `serial` int(11) DEFAULT NULL,
-  `serial_shop` int(11) DEFAULT NULL,
-  `item` smallint(6) DEFAULT NULL,
-  `level` tinyint(4) DEFAULT NULL,
+  `server` smallint(6) unsigned DEFAULT NULL,
+  `serial` int(11) unsigned DEFAULT NULL,
+  `serial_shop` int(11) unsigned DEFAULT NULL,
+  `item` smallint(6) unsigned DEFAULT NULL,
+  `level` tinyint(4) unsigned DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -242,15 +242,15 @@ DROP TABLE IF EXISTS `log_item_drop`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_item_drop` (
-  `server` smallint(6) DEFAULT NULL,
-  `account_id` int(11) DEFAULT NULL,
+  `server` smallint(6) unsigned DEFAULT NULL,
+  `account_id` int(11) unsigned DEFAULT NULL,
   `account` varchar(255) DEFAULT NULL,
-  `char_id` int(11) DEFAULT NULL,
+  `char_id` int(11) unsigned DEFAULT NULL,
   `char_name` varchar(255) DEFAULT NULL,
   `player_data` varchar(255) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL,
   `comment` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -270,15 +270,15 @@ DROP TABLE IF EXISTS `log_item_loot`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_item_loot` (
-  `server` smallint(6) DEFAULT NULL,
-  `account_id` int(11) DEFAULT NULL,
+  `server` smallint(6) unsigned DEFAULT NULL,
+  `account_id` int(11) unsigned DEFAULT NULL,
   `account` varchar(255) DEFAULT NULL,
-  `char_id` int(11) DEFAULT NULL,
+  `char_id` int(11) unsigned DEFAULT NULL,
   `char_name` varchar(255) DEFAULT NULL,
   `player_data` varchar(255) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL,
   `comment` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -298,15 +298,15 @@ DROP TABLE IF EXISTS `log_item_sell`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_item_sell` (
-  `server` smallint(6) DEFAULT NULL,
-  `account_id` int(11) DEFAULT NULL,
+  `server` smallint(6) unsigned DEFAULT NULL,
+  `account_id` int(11) unsigned DEFAULT NULL,
   `account` varchar(255) DEFAULT NULL,
-  `char_id` int(11) DEFAULT NULL,
+  `char_id` int(11) unsigned DEFAULT NULL,
   `char_name` varchar(255) DEFAULT NULL,
   `player_data` varchar(255) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL,
   `comment` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -326,15 +326,15 @@ DROP TABLE IF EXISTS `log_jewel_drop`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_jewel_drop` (
-  `char_id` int(11) DEFAULT NULL,
-  `account_id` int(11) DEFAULT NULL,
-  `jewel_type` tinyint(4) DEFAULT NULL,
-  `jewel_index` smallint(6) DEFAULT NULL,
+  `char_id` int(11) unsigned DEFAULT NULL,
+  `account_id` int(11) unsigned DEFAULT NULL,
+  `jewel_type` tinyint(4) unsigned DEFAULT NULL,
+  `jewel_index` smallint(6) unsigned DEFAULT NULL,
   `jewel_name` varchar(255) DEFAULT NULL,
-  `world` smallint(6) DEFAULT NULL,
+  `world` smallint(6) unsigned DEFAULT NULL,
   `x` smallint(6) DEFAULT NULL,
   `y` smallint(6) DEFAULT NULL
-) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -354,13 +354,13 @@ DROP TABLE IF EXISTS `log_jewel_mix`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_jewel_mix` (
-  `char_id` int(11) DEFAULT NULL,
+  `char_id` int(11) unsigned DEFAULT NULL,
   `char_name` varchar(255) DEFAULT NULL,
-  `server` smallint(6) DEFAULT NULL,
-  `mix_type` tinyint(4) DEFAULT NULL,
-  `mix_id` tinyint(4) DEFAULT NULL,
-  `mix_level` tinyint(4) DEFAULT NULL
-) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
+  `server` smallint(6) unsigned DEFAULT NULL,
+  `mix_type` tinyint(4) unsigned DEFAULT NULL,
+  `mix_id` tinyint(4) unsigned DEFAULT NULL,
+  `mix_level` tinyint(4) unsigned DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -380,16 +380,16 @@ DROP TABLE IF EXISTS `log_level_up`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_level_up` (
-  `char_id` int(11) DEFAULT NULL,
+  `char_id` int(11) unsigned DEFAULT NULL,
   `char_name` varchar(255) DEFAULT NULL,
-  `level_normal` smallint(6) DEFAULT NULL,
-  `level_master` smallint(6) DEFAULT NULL,
-  `level_majestic` smallint(6) DEFAULT NULL,
-  `world` smallint(6) DEFAULT NULL,
+  `level_normal` smallint(6) unsigned DEFAULT NULL,
+  `level_master` smallint(6) unsigned DEFAULT NULL,
+  `level_majestic` smallint(6) unsigned DEFAULT NULL,
+  `world` smallint(6) unsigned DEFAULT NULL,
   `world_x` smallint(6) DEFAULT NULL,
   `world_y` smallint(6) DEFAULT NULL,
   `event_ground` tinyint(4) DEFAULT NULL
-) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -409,20 +409,20 @@ DROP TABLE IF EXISTS `log_mix`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_mix` (
-  `server` smallint(6) DEFAULT NULL,
-  `account_id` int(11) DEFAULT NULL,
+  `server` smallint(6) unsigned DEFAULT NULL,
+  `account_id` int(11) unsigned DEFAULT NULL,
   `account` varchar(255) DEFAULT NULL,
-  `char_id` int(11) DEFAULT NULL,
+  `char_id` int(11) unsigned DEFAULT NULL,
   `char_name` varchar(255) DEFAULT NULL,
   `player_data` varchar(255) DEFAULT NULL,
-  `mix_id` smallint(6) DEFAULT NULL,
+  `mix_id` smallint(6) unsigned DEFAULT NULL,
   `mix_name` varchar(255) DEFAULT NULL,
   `rate` int(11) DEFAULT NULL,
-  `cost` int(11) DEFAULT NULL,
-  `result` tinyint(4) DEFAULT NULL,
+  `cost` int(11) unsigned DEFAULT NULL,
+  `result` tinyint(4) unsigned DEFAULT NULL,
   `item_data_before` varchar(255) DEFAULT NULL,
   `item_data_after` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -442,20 +442,20 @@ DROP TABLE IF EXISTS `log_personal_store`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_personal_store` (
-  `server` smallint(6) DEFAULT NULL,
-  `account_id_01` int(11) DEFAULT NULL,
+  `server` smallint(6) unsigned DEFAULT NULL,
+  `account_id_01` int(11) unsigned DEFAULT NULL,
   `account_01` varchar(255) DEFAULT NULL,
-  `char_id_01` int(11) DEFAULT NULL,
+  `char_id_01` int(11) unsigned DEFAULT NULL,
   `char_name_01` varchar(255) DEFAULT NULL,
   `player_data_01` varchar(255) DEFAULT NULL,
-  `account_id_02` int(11) DEFAULT NULL,
+  `account_id_02` int(11) unsigned DEFAULT NULL,
   `account_02` varchar(255) DEFAULT NULL,
-  `char_id_02` int(11) DEFAULT NULL,
+  `char_id_02` int(11) unsigned DEFAULT NULL,
   `char_name_02` varchar(255) DEFAULT NULL,
   `player_data_02` varchar(255) DEFAULT NULL,
-  `offstore` tinyint(4) DEFAULT NULL,
+  `offstore` tinyint(4) unsigned DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -475,20 +475,20 @@ DROP TABLE IF EXISTS `log_pvp`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_pvp` (
-  `char_id_1` int(11) DEFAULT NULL,
+  `char_id_1` int(11) unsigned DEFAULT NULL,
   `char_name_1` varchar(255) DEFAULT NULL,
-  `char_class_1` tinyint(4) DEFAULT NULL,
+  `char_class_1` tinyint(4) unsigned DEFAULT NULL,
   `char_stat_1` varchar(255) DEFAULT NULL,
   `char_set_1` varchar(255) DEFAULT NULL,
-  `char_id_2` int(11) DEFAULT NULL,
+  `char_id_2` int(11) unsigned DEFAULT NULL,
   `char_name_2` varchar(255) DEFAULT NULL,
-  `char_class_2` tinyint(4) DEFAULT NULL,
+  `char_class_2` tinyint(4) unsigned DEFAULT NULL,
   `char_stat_2` varchar(255) DEFAULT NULL,
   `char_set_2` varchar(255) DEFAULT NULL,
-  `skill` varchar(255) DEFAULT NULL,
+  `skill` smallint(5) unsigned DEFAULT NULL,
   `hp_damage` int(11) DEFAULT NULL,
   `sd_damage` int(11) DEFAULT NULL
-) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -508,20 +508,20 @@ DROP TABLE IF EXISTS `log_trade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_trade` (
-  `server` smallint(6) DEFAULT NULL,
-  `account_id_01` int(11) DEFAULT NULL,
+  `server` smallint(6) unsigned DEFAULT NULL,
+  `account_id_01` int(11) unsigned DEFAULT NULL,
   `account_01` varchar(255) DEFAULT NULL,
-  `char_id_01` int(11) DEFAULT NULL,
+  `char_id_01` int(11) unsigned DEFAULT NULL,
   `char_name_01` varchar(255) DEFAULT NULL,
   `player_data_01` varchar(255) DEFAULT NULL,
-  `account_id_02` int(11) DEFAULT NULL,
+  `account_id_02` int(11) unsigned DEFAULT NULL,
   `account_02` varchar(255) DEFAULT NULL,
-  `char_id_02` int(11) DEFAULT NULL,
+  `char_id_02` int(11) unsigned DEFAULT NULL,
   `char_name_02` varchar(255) DEFAULT NULL,
   `player_data_02` varchar(255) DEFAULT NULL,
-  `money` int(11) DEFAULT NULL,
+  `money` int(11) unsigned DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -541,15 +541,15 @@ DROP TABLE IF EXISTS `mix_recovery`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `mix_recovery` (
-  `server` smallint(6) DEFAULT NULL,
-  `account_id` int(11) DEFAULT NULL,
+  `server` smallint(6) unsigned DEFAULT NULL,
+  `account_id` int(11) unsigned DEFAULT NULL,
   `account` varchar(255) DEFAULT NULL,
-  `char_id` int(11) DEFAULT NULL,
+  `char_id` int(11) unsigned DEFAULT NULL,
   `char_name` varchar(255) DEFAULT NULL,
   `player_data` varchar(255) DEFAULT NULL,
-  `type` tinyint(4) DEFAULT NULL,
+  `type` tinyint(4) unsigned DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -569,15 +569,15 @@ DROP TABLE IF EXISTS `reward_dungeon`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `reward_dungeon` (
-  `server` smallint(6) DEFAULT NULL,
-  `account_id` int(11) DEFAULT NULL,
+  `server` smallint(6) unsigned DEFAULT NULL,
+  `account_id` int(11) unsigned DEFAULT NULL,
   `account` varchar(255) DEFAULT NULL,
-  `char_id` int(11) DEFAULT NULL,
+  `char_id` int(11) unsigned DEFAULT NULL,
   `char_name` varchar(255) DEFAULT NULL,
   `player_data` varchar(255) DEFAULT NULL,
-  `type` tinyint(4) DEFAULT NULL,
+  `type` tinyint(4) unsigned DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -597,13 +597,13 @@ DROP TABLE IF EXISTS `reward_labyrinth_of_dimensions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `reward_labyrinth_of_dimensions` (
-  `server` smallint(6) DEFAULT NULL,
-  `char_id` int(11) DEFAULT NULL,
+  `server` smallint(6) unsigned DEFAULT NULL,
+  `char_id` int(11) unsigned DEFAULT NULL,
   `char_name` varchar(255) DEFAULT NULL,
-  `category` tinyint(4) DEFAULT NULL,
+  `category` tinyint(4) unsigned DEFAULT NULL,
   `rank` int(11) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -624,4 +624,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-04  0:03:22
+-- Dump completed on 2021-03-05 12:00:54
