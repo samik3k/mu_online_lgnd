@@ -415,7 +415,7 @@ void CQuestMgr::LoadQuestMU()
 
 	uint32 count = 0;
 
-	QueryResult result = GameServerDatabase.Query("SELECT * FROM quest_mu AS i WHERE i.Disabled = 0");
+	QueryResult result = GameServerDatabase.Query("SELECT * FROM quest_mu AS i WHERE i.disabled = 0");
 
 	if (result)
 	{
