@@ -345,6 +345,7 @@ CREATE TABLE `item_serial` (
 
 LOCK TABLES `item_serial` WRITE;
 /*!40000 ALTER TABLE `item_serial` DISABLE KEYS */;
+INSERT INTO `item_serial` VALUES (0,0,0);
 /*!40000 ALTER TABLE `item_serial` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -400,7 +401,7 @@ CREATE TABLE `server_list` (
 
 LOCK TABLES `server_list` WRITE;
 /*!40000 ALTER TABLE `server_list` DISABLE KEYS */;
-INSERT INTO `server_list` VALUES (123,123,'Test',55509,'127.0.0.1',0,0,0,75,75,0);
+INSERT INTO `server_list` VALUES (0,0,'Test',55509,'127.0.0.1',0,1,0,75,75,0);
 /*!40000 ALTER TABLE `server_list` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -424,7 +425,7 @@ CREATE TABLE `world_server` (
 
 LOCK TABLES `world_server` WRITE;
 /*!40000 ALTER TABLE `world_server` DISABLE KEYS */;
-INSERT INTO `world_server` VALUES (123,123);
+INSERT INTO `world_server` VALUES (0,123);
 /*!40000 ALTER TABLE `world_server` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -437,4 +438,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-05 17:50:38
+-- Dump completed on 2021-03-10 15:11:35

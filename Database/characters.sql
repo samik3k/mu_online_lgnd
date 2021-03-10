@@ -212,6 +212,7 @@ CREATE TABLE `castle_siege_data` (
 
 LOCK TABLES `castle_siege_data` WRITE;
 /*!40000 ALTER TABLE `castle_siege_data` DISABLE KEYS */;
+INSERT INTO `castle_siege_data` VALUES (0,0,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `castle_siege_data` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1398,6 +1399,7 @@ CREATE TABLE `crywolf_data` (
 
 LOCK TABLES `crywolf_data` WRITE;
 /*!40000 ALTER TABLE `crywolf_data` DISABLE KEYS */;
+INSERT INTO `crywolf_data` VALUES (0);
 /*!40000 ALTER TABLE `crywolf_data` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1848,6 +1850,7 @@ CREATE TABLE `event_stage` (
 
 LOCK TABLES `event_stage` WRITE;
 /*!40000 ALTER TABLE `event_stage` DISABLE KEYS */;
+INSERT INTO `event_stage` VALUES (16,0);
 /*!40000 ALTER TABLE `event_stage` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2397,4 +2400,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-05 17:50:01
+-- Dump completed on 2021-03-10 15:10:59
