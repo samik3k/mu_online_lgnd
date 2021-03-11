@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `accounts`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `accounts` (
-  `guid` int(11) unsigned NOT NULL,
+  `guid` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `blocked` tinyint(4) unsigned DEFAULT NULL,
   `security_code` varchar(255) DEFAULT NULL,
   `golden_channel` bigint(20) DEFAULT NULL,
@@ -31,8 +31,10 @@ CREATE TABLE `accounts` (
   `secured` tinyint(4) unsigned DEFAULT NULL,
   `account` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `register` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`guid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,6 +43,7 @@ CREATE TABLE `accounts` (
 
 LOCK TABLES `accounts` WRITE;
 /*!40000 ALTER TABLE `accounts` DISABLE KEYS */;
+INSERT INTO `accounts` VALUES (1,NULL,'12digitsphra',1500434821,NULL,1,'user','67eabbf39d1e39ae7fad930244949c85d12b72965795794c9d5b66e8d8595467','user@email.com',20210311111308);
 /*!40000 ALTER TABLE `accounts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -139,6 +142,7 @@ CREATE TABLE `accounts_security` (
 
 LOCK TABLES `accounts_security` WRITE;
 /*!40000 ALTER TABLE `accounts_security` DISABLE KEYS */;
+INSERT INTO `accounts_security` VALUES (1,'user','192.168.1.60','B4:2E:99:C7:D5:A3',1519512988);
 /*!40000 ALTER TABLE `accounts_security` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -179,6 +183,7 @@ CREATE TABLE `accounts_status` (
 
 LOCK TABLES `accounts_status` WRITE;
 /*!40000 ALTER TABLE `accounts_status` DISABLE KEYS */;
+INSERT INTO `accounts_status` VALUES (1,0,0,0,-1,-1,-1,-1,0,0,0,0,0,'192.168.1.60','B4:2E:99:C7:D5:A3','2021-03-11 11:13:51',0,1519512988,NULL);
 /*!40000 ALTER TABLE `accounts_status` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -202,6 +207,7 @@ CREATE TABLE `accounts_validation` (
 
 LOCK TABLES `accounts_validation` WRITE;
 /*!40000 ALTER TABLE `accounts_validation` DISABLE KEYS */;
+INSERT INTO `accounts_validation` VALUES (1,1519512988);
 /*!40000 ALTER TABLE `accounts_validation` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -380,7 +386,7 @@ DROP TABLE IF EXISTS `server_list`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `server_list` (
-  `server` smallint(6) unsigned NOT NULL,
+  `server` smallint(6) unsigned NOT NULL AUTO_INCREMENT,
   `code` smallint(6) unsigned DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
   `port` smallint(6) unsigned DEFAULT NULL,
@@ -392,7 +398,7 @@ CREATE TABLE `server_list` (
   `default_y` smallint(6) DEFAULT NULL,
   `type` tinyint(4) unsigned DEFAULT NULL,
   PRIMARY KEY (`server`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -401,7 +407,7 @@ CREATE TABLE `server_list` (
 
 LOCK TABLES `server_list` WRITE;
 /*!40000 ALTER TABLE `server_list` DISABLE KEYS */;
-INSERT INTO `server_list` VALUES (0,0,'Test',55509,'127.0.0.1',0,1,0,75,75,0);
+INSERT INTO `server_list` VALUES (0,0,'Test',55509,'127.0.0.1',1,1,0,75,75,0);
 /*!40000 ALTER TABLE `server_list` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -425,7 +431,7 @@ CREATE TABLE `world_server` (
 
 LOCK TABLES `world_server` WRITE;
 /*!40000 ALTER TABLE `world_server` DISABLE KEYS */;
-INSERT INTO `world_server` VALUES (0,123);
+INSERT INTO `world_server` VALUES (0,0);
 /*!40000 ALTER TABLE `world_server` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -438,4 +444,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-10 15:11:35
+-- Dump completed on 2021-03-11 11:24:11
