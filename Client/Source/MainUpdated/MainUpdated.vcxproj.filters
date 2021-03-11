@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AntiCheat.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CashShop.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CastleSiege.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Common.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomObject.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIMgr.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="HackCheck.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="InputOutput.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="MainPCH.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEncode.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketEncDec.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketManager.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="PrintPlayer.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ReadScript.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Reconnect.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Util.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AntiCheat.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="ByteBuffer.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="CashShop.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="CastleSiege.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomObject.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Defines.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="GamePacket.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIMgr.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="HackCheck.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="InputOutput.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Main.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="MainPCH.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEncode.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Offset.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Packet.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketEncDec.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketManager.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="PrintPlayer.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadScript.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconnect.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Util.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
