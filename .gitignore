@@ -50,3 +50,4 @@
 /Release/*.map
 
 /Release/ConnectServer.conf.dmp
+/Client/Source/MainUpdated/Release
