@@ -187,7 +187,7 @@ CREATE TABLE `character_base` (
 
 LOCK TABLES `character_base` WRITE;
 /*!40000 ALTER TABLE `character_base` DISABLE KEYS */;
-INSERT INTO `character_base` VALUES (1,50,50,50,50,0,500,500,15,15,15,15,1,1,50,15,15,15,15,15,15,15,15);
+INSERT INTO `character_base` VALUES (1,50,50,50,50,0,500,500,15,15,15,15,0,1,50,15,15,15,15,15,15,15,15);
 /*!40000 ALTER TABLE `character_base` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5416,7 +5416,7 @@ CREATE TABLE `world_template` (
 
 LOCK TABLES `world_template` WRITE;
 /*!40000 ALTER TABLE `world_template` DISABLE KEYS */;
-INSERT INTO `world_template` VALUES (1,1,0,'terrain1.att','Lorencia',17,1,1,0);
+INSERT INTO `world_template` VALUES (0,0,0,'terrain1.att','Lorencia',17,1,1,0);
 /*!40000 ALTER TABLE `world_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -5429,4 +5429,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-11 17:38:55
+-- Dump completed on 2021-03-12  1:10:41
