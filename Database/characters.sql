@@ -136,7 +136,7 @@ CREATE TABLE `account_data` (
 
 LOCK TABLES `account_data` WRITE;
 /*!40000 ALTER TABLE `account_data` DISABLE KEYS */;
-INSERT INTO `account_data` VALUES (1,-1,0,0,0,0,0,NULL,4,0,'192.168.1.60','B4:2E:99:C7:D5:A3',1519512988,0,NULL,NULL,NULL);
+INSERT INTO `account_data` VALUES (1,-1,0,0,0,0,0,NULL,4,0,'192.168.1.60','B4:2E:99:C7:D5:A3',1519512988,0,NULL,NULL,NULL),(2,-1,0,0,0,0,0,NULL,6,0,'192.168.1.60','B4:2E:99:C7:D5:A3',1519512988,0,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `account_data` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -161,7 +161,7 @@ CREATE TABLE `account_warehouse` (
 
 LOCK TABLES `account_warehouse` WRITE;
 /*!40000 ALTER TABLE `account_warehouse` DISABLE KEYS */;
-INSERT INTO `account_warehouse` VALUES (1,0,0);
+INSERT INTO `account_warehouse` VALUES (1,0,0),(2,0,0);
 /*!40000 ALTER TABLE `account_warehouse` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -537,7 +537,7 @@ CREATE TABLE `character_gameoption` (
 
 LOCK TABLES `character_gameoption` WRITE;
 /*!40000 ALTER TABLE `character_gameoption` DISABLE KEYS */;
-INSERT INTO `character_gameoption` VALUES (0,29,0,255,255,255,255,0,65535,65535,65535,65535,65535,65535,65535,65535,65535,65535,0,1,54794,0,10,11,8,1),(4,29,0,255,255,255,255,0,65535,65535,65535,65535,65535,65535,65535,65535,65535,65535,0,1,778,0,10,11,8,1);
+INSERT INTO `character_gameoption` VALUES (0,29,0,255,255,255,255,0,65535,65535,65535,65535,65535,65535,65535,65535,65535,65535,0,1,54794,0,10,11,8,1),(4,29,0,255,255,255,255,0,65535,65535,65535,65535,65535,65535,65535,65535,65535,65535,0,1,778,0,10,11,8,1),(5,0,0,255,255,255,255,0,65535,65535,65535,65535,65535,65535,65535,65535,65535,65535,0,1,778,0,10,11,8,1),(6,0,0,255,255,255,255,0,65535,65535,65535,65535,65535,65535,65535,65535,65535,65535,0,1,778,0,10,11,8,1);
 /*!40000 ALTER TABLE `character_gameoption` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -566,7 +566,7 @@ CREATE TABLE `character_gens` (
 
 LOCK TABLES `character_gens` WRITE;
 /*!40000 ALTER TABLE `character_gens` DISABLE KEYS */;
-INSERT INTO `character_gens` VALUES (4,0,14,0,0,0,0);
+INSERT INTO `character_gens` VALUES (4,0,14,0,0,0,0),(5,0,14,0,0,0,0),(6,0,14,0,0,0,0);
 /*!40000 ALTER TABLE `character_gens` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -636,7 +636,7 @@ CREATE TABLE `character_helper` (
 
 LOCK TABLES `character_helper` WRITE;
 /*!40000 ALTER TABLE `character_helper` DISABLE KEYS */;
-INSERT INTO `character_helper` VALUES (4,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,50,50,50,50,0,65535,65535,65535);
+INSERT INTO `character_helper` VALUES (4,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,50,50,50,50,0,65535,65535,65535),(5,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,50,50,50,50,0,65535,65535,65535),(6,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,50,50,50,50,0,65535,65535,65535);
 /*!40000 ALTER TABLE `character_helper` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -734,7 +734,7 @@ CREATE TABLE `character_info` (
   `online` tinyint(4) DEFAULT NULL,
   `server_code` smallint(6) unsigned DEFAULT NULL,
   PRIMARY KEY (`guid`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -743,7 +743,7 @@ CREATE TABLE `character_info` (
 
 LOCK TABLES `character_info` WRITE;
 /*!40000 ALTER TABLE `character_info` DISABLE KEYS */;
-INSERT INTO `character_info` VALUES (4,1,0,16,'test',0,1,0,0,0,0,0,50,0,0,50,50,50,50,0,0,133,130,2,0,500,500,0,82,0,0,0,0,0,0,0,0,0,0,'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=',0,0,1615500603,1615473057,0,0,0,0,0,NULL,0,65535);
+INSERT INTO `character_info` VALUES (4,1,0,16,'test',0,1,0,0,0,0,0,30,0,0,60,60,50,50,0,0,143,122,3,0,185,80,0,86,0,0,0,0,0,0,0,0,0,0,'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=',0,0,1615619342,1615473057,0,0,0,0,0,NULL,0,65535),(5,1,0,112,'grow',1,1,0,0,0,0,0,0,0,0,30,30,25,24,0,0,145,140,5,0,110,40,0,42,0,0,0,0,0,0,0,0,0,0,'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=',0,0,1615546544,1615503467,0,0,0,0,0,NULL,0,65535),(6,2,0,160,'guntest',0,1,0,0,0,0,0,0,0,0,20,18,20,25,0,0,146,140,3,0,100,80,0,31,0,0,0,0,0,0,0,0,0,0,'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=',0,0,1615546540,1615546185,0,0,0,0,0,NULL,0,65535);
 /*!40000 ALTER TABLE `character_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -797,7 +797,7 @@ CREATE TABLE `character_jewel_bingo` (
 
 LOCK TABLES `character_jewel_bingo` WRITE;
 /*!40000 ALTER TABLE `character_jewel_bingo` DISABLE KEYS */;
-INSERT INTO `character_jewel_bingo` VALUES (4,0,0,0,0,0,0,0,0);
+INSERT INTO `character_jewel_bingo` VALUES (4,0,0,0,0,0,0,0,0),(5,0,0,0,0,0,0,0,0),(6,0,0,0,0,0,0,0,0);
 /*!40000 ALTER TABLE `character_jewel_bingo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -878,7 +878,7 @@ CREATE TABLE `character_labyrinth` (
 
 LOCK TABLES `character_labyrinth` WRITE;
 /*!40000 ALTER TABLE `character_labyrinth` DISABLE KEYS */;
-INSERT INTO `character_labyrinth` VALUES (4,0,255,0,0,0,0,0,0,0,0);
+INSERT INTO `character_labyrinth` VALUES (4,0,255,0,0,0,0,0,0,0,0),(5,0,255,0,0,0,0,0,0,0,0),(6,0,255,0,0,0,0,0,0,0,0);
 /*!40000 ALTER TABLE `character_labyrinth` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -993,7 +993,7 @@ CREATE TABLE `character_majestic_stats` (
 
 LOCK TABLES `character_majestic_stats` WRITE;
 /*!40000 ALTER TABLE `character_majestic_stats` DISABLE KEYS */;
-INSERT INTO `character_majestic_stats` VALUES (4,0,0),(4,1,0),(4,2,0),(4,3,0);
+INSERT INTO `character_majestic_stats` VALUES (4,0,0),(4,1,0),(4,2,0),(4,3,0),(5,0,0),(5,1,0),(5,2,0),(5,3,0),(6,0,0),(6,1,0),(6,2,0),(6,3,0);
 /*!40000 ALTER TABLE `character_majestic_stats` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1046,7 +1046,7 @@ CREATE TABLE `character_mini_bomb` (
 
 LOCK TABLES `character_mini_bomb` WRITE;
 /*!40000 ALTER TABLE `character_mini_bomb` DISABLE KEYS */;
-INSERT INTO `character_mini_bomb` VALUES (4,1,0,0,1615500359);
+INSERT INTO `character_mini_bomb` VALUES (4,1,0,0,1615500359),(5,1,0,0,1615546141),(6,1,0,0,0);
 /*!40000 ALTER TABLE `character_mini_bomb` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1125,7 +1125,7 @@ CREATE TABLE `character_mu_roomy` (
 
 LOCK TABLES `character_mu_roomy` WRITE;
 /*!40000 ALTER TABLE `character_mu_roomy` DISABLE KEYS */;
-INSERT INTO `character_mu_roomy` VALUES (4,0,0,0,0,0,1615473057);
+INSERT INTO `character_mu_roomy` VALUES (4,0,0,0,0,0,1615473057),(5,0,0,0,0,0,1615503467),(6,0,0,0,0,0,1615546185);
 /*!40000 ALTER TABLE `character_mu_roomy` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1183,7 +1183,7 @@ CREATE TABLE `character_numeric_baseball` (
 
 LOCK TABLES `character_numeric_baseball` WRITE;
 /*!40000 ALTER TABLE `character_numeric_baseball` DISABLE KEYS */;
-INSERT INTO `character_numeric_baseball` VALUES (4,0,0,255,255,255,'255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 ','0 0 0 0 0 ','0 0 0 0 0 ');
+INSERT INTO `character_numeric_baseball` VALUES (4,0,0,255,255,255,'255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 ','0 0 0 0 0 ','0 0 0 0 0 '),(5,0,0,255,255,255,'255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 ','0 0 0 0 0 ','0 0 0 0 0 '),(6,0,0,255,255,255,'255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 ','0 0 0 0 0 ','0 0 0 0 0 ');
 /*!40000 ALTER TABLE `character_numeric_baseball` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1239,7 +1239,7 @@ CREATE TABLE `character_quest_guided` (
 
 LOCK TABLES `character_quest_guided` WRITE;
 /*!40000 ALTER TABLE `character_quest_guided` DISABLE KEYS */;
-INSERT INTO `character_quest_guided` VALUES (4,11,0,1,0);
+INSERT INTO `character_quest_guided` VALUES (4,11,0,1,0),(5,11,0,1,0),(6,13,0,1,0);
 /*!40000 ALTER TABLE `character_quest_guided` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1391,7 +1391,7 @@ CREATE TABLE `character_warp_favorite_list` (
 
 LOCK TABLES `character_warp_favorite_list` WRITE;
 /*!40000 ALTER TABLE `character_warp_favorite_list` DISABLE KEYS */;
-INSERT INTO `character_warp_favorite_list` VALUES (4,0,65535,65535);
+INSERT INTO `character_warp_favorite_list` VALUES (4,0,65535,65535),(5,0,65535,65535),(6,0,65535,65535);
 /*!40000 ALTER TABLE `character_warp_favorite_list` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2415,4 +2415,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-12  1:10:29
+-- Dump completed on 2021-03-13 12:01:47
