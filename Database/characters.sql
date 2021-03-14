@@ -704,8 +704,8 @@ CREATE TABLE `character_info` (
   `world` smallint(6) unsigned NOT NULL,
   `world_x` smallint(6) NOT NULL,
   `world_y` smallint(6) NOT NULL,
-  `money` int(11) unsigned NOT NULL,
   `direction` tinyint(4) unsigned NOT NULL,
+  `money` int(11) unsigned NOT NULL,
   `life` int(11) NOT NULL,
   `mana` int(11) NOT NULL,
   `shield` int(11) NOT NULL,
@@ -744,7 +744,7 @@ CREATE TABLE `character_info` (
 
 LOCK TABLES `character_info` WRITE;
 /*!40000 ALTER TABLE `character_info` DISABLE KEYS */;
-INSERT INTO `character_info` VALUES (4,1,0,16,'test',0,1,0,0,0,0,0,30,0,0,60,60,50,50,0,0,143,122,0,3,185,80,0,86,0,0,0,0,0,0,0,0,0,0,'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=',0,0,1615619342,1615473057,0,0,0,0,0,0,0,65535),(5,1,0,112,'grow',1,1,0,0,0,0,0,0,0,0,30,30,25,24,0,0,145,140,0,5,110,40,0,42,0,0,0,0,0,0,0,0,0,0,'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=',0,0,1615546544,1615503467,0,0,0,0,0,0,0,65535),(6,2,0,160,'guntest',0,1,0,0,0,0,0,0,0,0,20,18,20,25,0,0,146,140,0,3,100,80,0,31,0,0,0,0,0,0,0,0,0,0,'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=',0,0,1615546540,1615546185,0,0,0,0,0,0,0,65535);
+INSERT INTO `character_info` VALUES (4,1,0,16,'test',0,1,0,0,0,0,0,30,0,0,60,60,50,50,0,0,143,122,3,0,185,80,0,86,0,0,0,0,0,0,0,0,0,0,'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=',0,0,1615619342,1615473057,0,0,0,0,0,0,0,65535),(5,1,0,112,'grow',1,1,0,0,0,0,0,0,0,0,30,30,25,24,0,0,145,140,5,0,110,40,0,42,0,0,0,0,0,0,0,0,0,0,'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=',0,0,1615546544,1615503467,0,0,0,0,0,0,0,65535),(6,2,0,160,'guntest',0,1,0,0,0,0,0,0,0,0,20,18,20,25,0,0,146,140,3,0,100,80,0,31,0,0,0,0,0,0,0,0,0,0,'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=',0,0,1615546540,1615546185,0,0,0,0,0,0,0,65535);
 /*!40000 ALTER TABLE `character_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2001,60 +2001,6 @@ LOCK TABLES `guild_score` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `item_data_my`
---
-
-DROP TABLE IF EXISTS `item_data_my`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `item_data_my` (
-  `id` int(11) unsigned NOT NULL,
-  `box` tinyint(4) unsigned NOT NULL,
-  `slot` int(11) unsigned NOT NULL,
-  `entry` smallint(6) unsigned NOT NULL,
-  `server` smallint(6) unsigned NOT NULL,
-  `serial` int(11) unsigned NOT NULL,
-  `serial_cash_shop` int(11) unsigned NOT NULL,
-  `level` tinyint(4) unsigned NOT NULL,
-  `durability` tinyint(4) unsigned NOT NULL,
-  `durability_state` int(11) NOT NULL,
-  `skill` tinyint(4) unsigned NOT NULL,
-  `luck` tinyint(4) unsigned NOT NULL,
-  `option` tinyint(4) unsigned NOT NULL,
-  `excellent` tinyint(4) unsigned NOT NULL,
-  `ancient` tinyint(4) unsigned NOT NULL,
-  `option_380` tinyint(4) unsigned NOT NULL,
-  `harmony` tinyint(4) unsigned NOT NULL,
-  `socket_1` smallint(6) unsigned NOT NULL,
-  `socket_2` smallint(6) unsigned NOT NULL,
-  `socket_3` smallint(6) unsigned NOT NULL,
-  `socket_4` smallint(6) unsigned NOT NULL,
-  `socket_5` smallint(6) unsigned NOT NULL,
-  `socket_bonus` tinyint(4) unsigned NOT NULL,
-  `locked` tinyint(4) unsigned NOT NULL,
-  `data_1` int(11) NOT NULL,
-  `data_2` int(11) NOT NULL,
-  `data_3` int(11) NOT NULL,
-  `personal_store_price` int(11) unsigned NOT NULL,
-  `personal_store_job` smallint(6) unsigned NOT NULL,
-  `personal_store_jos` smallint(6) unsigned NOT NULL,
-  `personal_store_joc` smallint(6) unsigned NOT NULL,
-  `expire_date` bigint(20) NOT NULL,
-  `flags` int(11) unsigned NOT NULL,
-  PRIMARY KEY (`id`,`box`,`slot`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `item_data_my`
---
-
-LOCK TABLES `item_data_my` WRITE;
-/*!40000 ALTER TABLE `item_data_my` DISABLE KEYS */;
-/*!40000 ALTER TABLE `item_data_my` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `item_data`
 --
 
@@ -2112,6 +2058,60 @@ CREATE TABLE `item_data` (
 LOCK TABLES `item_data` WRITE;
 /*!40000 ALTER TABLE `item_data` DISABLE KEYS */;
 /*!40000 ALTER TABLE `item_data` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `item_data_my`
+--
+
+DROP TABLE IF EXISTS `item_data_my`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `item_data_my` (
+  `id` int(11) unsigned NOT NULL,
+  `box` tinyint(4) unsigned NOT NULL,
+  `slot` int(11) unsigned NOT NULL,
+  `entry` smallint(6) unsigned NOT NULL,
+  `server` smallint(6) unsigned NOT NULL,
+  `serial` int(11) unsigned NOT NULL,
+  `serial_cash_shop` int(11) unsigned NOT NULL,
+  `level` tinyint(4) unsigned NOT NULL,
+  `durability` tinyint(4) unsigned NOT NULL,
+  `durability_state` int(11) NOT NULL,
+  `skill` tinyint(4) unsigned NOT NULL,
+  `luck` tinyint(4) unsigned NOT NULL,
+  `option` tinyint(4) unsigned NOT NULL,
+  `excellent` tinyint(4) unsigned NOT NULL,
+  `ancient` tinyint(4) unsigned NOT NULL,
+  `option_380` tinyint(4) unsigned NOT NULL,
+  `harmony` tinyint(4) unsigned NOT NULL,
+  `socket_1` smallint(6) unsigned NOT NULL,
+  `socket_2` smallint(6) unsigned NOT NULL,
+  `socket_3` smallint(6) unsigned NOT NULL,
+  `socket_4` smallint(6) unsigned NOT NULL,
+  `socket_5` smallint(6) unsigned NOT NULL,
+  `socket_bonus` tinyint(4) unsigned NOT NULL,
+  `locked` tinyint(4) unsigned NOT NULL,
+  `data_1` int(11) NOT NULL,
+  `data_2` int(11) NOT NULL,
+  `data_3` int(11) NOT NULL,
+  `personal_store_price` int(11) unsigned NOT NULL,
+  `personal_store_job` smallint(6) unsigned NOT NULL,
+  `personal_store_jos` smallint(6) unsigned NOT NULL,
+  `personal_store_joc` smallint(6) unsigned NOT NULL,
+  `expire_date` bigint(20) NOT NULL,
+  `flags` int(11) unsigned NOT NULL,
+  PRIMARY KEY (`id`,`box`,`slot`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `item_data_my`
+--
+
+LOCK TABLES `item_data_my` WRITE;
+/*!40000 ALTER TABLE `item_data_my` DISABLE KEYS */;
+/*!40000 ALTER TABLE `item_data_my` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -2416,4 +2416,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-14 11:02:21
+-- Dump completed on 2021-03-14 11:57:14
