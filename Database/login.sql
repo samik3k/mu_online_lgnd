@@ -24,17 +24,18 @@ DROP TABLE IF EXISTS `accounts`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `accounts` (
   `guid` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `blocked` tinyint(4) unsigned DEFAULT NULL,
+  `blocked` tinyint(4) unsigned NOT NULL,
   `security_code` varchar(255) DEFAULT NULL,
-  `golden_channel` bigint(20) DEFAULT NULL,
-  `facebook_status` tinyint(4) unsigned DEFAULT NULL,
-  `secured` tinyint(4) unsigned DEFAULT NULL,
-  `account` varchar(255) DEFAULT NULL,
+  `golden_channel` bigint(20) NOT NULL,
+  `facebook_status` tinyint(4) unsigned NOT NULL,
+  `secured` tinyint(4) unsigned NOT NULL,
+  `account` varchar(255) NOT NULL,
   `password` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
-  `register` bigint(20) DEFAULT NULL,
-  PRIMARY KEY (`guid`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+  `register` bigint(20) NOT NULL,
+  PRIMARY KEY (`guid`),
+  UNIQUE KEY `account_UNIQUE` (`account`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +44,7 @@ CREATE TABLE `accounts` (
 
 LOCK TABLES `accounts` WRITE;
 /*!40000 ALTER TABLE `accounts` DISABLE KEYS */;
-INSERT INTO `accounts` VALUES (1,NULL,'12digitsphra',1500434821,NULL,1,'user','67eabbf39d1e39ae7fad930244949c85d12b72965795794c9d5b66e8d8595467','user@email.com',20210311111308),(2,NULL,'12digitsphra',1500434821,NULL,1,'user2','ae471a7d82020498f9bab02f476d40e61bbdd985e1d625825a7ed603be8cb498','user2@email.com',20210312134729),(3,NULL,'12digitsphra',1500434821,NULL,1,'user2','ae471a7d82020498f9bab02f476d40e61bbdd985e1d625825a7ed603be8cb498','user2@email.com',20210313100434);
+INSERT INTO `accounts` VALUES (1,0,'12digitsphra',1500434821,0,1,'user','67eabbf39d1e39ae7fad930244949c85d12b72965795794c9d5b66e8d8595467','user@email.com',20210311111308),(2,0,'12digitsphra',1500434821,0,1,'user2','ae471a7d82020498f9bab02f476d40e61bbdd985e1d625825a7ed603be8cb498','user2@email.com',20210312134729);
 /*!40000 ALTER TABLE `accounts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -56,8 +57,8 @@ DROP TABLE IF EXISTS `accounts_allowed`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `accounts_allowed` (
   `account_id` int(11) unsigned NOT NULL,
-  `guid` int(11) unsigned DEFAULT NULL,
-  `server` smallint(6) unsigned DEFAULT NULL,
+  `guid` int(11) unsigned NOT NULL,
+  `server` smallint(6) unsigned NOT NULL,
   PRIMARY KEY (`account_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -80,8 +81,8 @@ DROP TABLE IF EXISTS `accounts_banned`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `accounts_banned` (
   `account_id` int(11) unsigned NOT NULL,
-  `guid` int(11) unsigned DEFAULT NULL,
-  `unban_date` bigint(20) DEFAULT NULL,
+  `guid` int(11) unsigned NOT NULL,
+  `unban_date` bigint(20) NOT NULL,
   PRIMARY KEY (`account_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -104,8 +105,8 @@ DROP TABLE IF EXISTS `accounts_disconnect`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `accounts_disconnect` (
   `account_id` int(11) unsigned NOT NULL,
-  `server` smallint(6) unsigned DEFAULT NULL,
-  `masive` tinyint(4) DEFAULT NULL,
+  `server` smallint(6) unsigned NOT NULL,
+  `masive` tinyint(4) unsigned NOT NULL,
   PRIMARY KEY (`account_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -131,7 +132,7 @@ CREATE TABLE `accounts_security` (
   `account` varchar(255) DEFAULT NULL,
   `ip` varchar(16) DEFAULT NULL,
   `mac` varchar(50) DEFAULT NULL,
-  `disk_serial` int(11) unsigned DEFAULT NULL
+  `disk_serial` int(11) unsigned NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -154,24 +155,24 @@ DROP TABLE IF EXISTS `accounts_status`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `accounts_status` (
   `account_id` int(11) unsigned NOT NULL,
-  `server_group` smallint(6) unsigned DEFAULT NULL,
-  `current_server` smallint(6) unsigned DEFAULT NULL,
-  `start_server` smallint(6) unsigned DEFAULT NULL,
-  `dest_server` smallint(6) DEFAULT NULL,
-  `dest_world` smallint(6) DEFAULT NULL,
-  `dest_x` smallint(6) DEFAULT NULL,
-  `dest_y` smallint(6) DEFAULT NULL,
-  `warp_time` int(11) unsigned DEFAULT NULL,
-  `warp_auth_1` int(11) unsigned DEFAULT NULL,
-  `warp_auth_2` int(11) unsigned DEFAULT NULL,
-  `warp_auth_3` int(11) unsigned DEFAULT NULL,
-  `warp_auth_4` int(11) unsigned DEFAULT NULL,
+  `server_group` smallint(6) unsigned NOT NULL,
+  `current_server` smallint(6) unsigned NOT NULL,
+  `start_server` smallint(6) unsigned NOT NULL,
+  `dest_server` smallint(6) NOT NULL,
+  `dest_world` smallint(6) NOT NULL,
+  `dest_x` smallint(6) NOT NULL,
+  `dest_y` smallint(6) NOT NULL,
+  `warp_time` int(11) unsigned NOT NULL,
+  `warp_auth_1` int(11) unsigned NOT NULL,
+  `warp_auth_2` int(11) unsigned NOT NULL,
+  `warp_auth_3` int(11) unsigned NOT NULL,
+  `warp_auth_4` int(11) unsigned NOT NULL,
   `last_ip` varchar(16) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
   `last_mac` varchar(50) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
   `last_online` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
-  `online` tinyint(4) DEFAULT NULL,
-  `disk_serial` int(11) unsigned DEFAULT NULL,
-  `type` tinyint(4) unsigned DEFAULT NULL,
+  `online` tinyint(4) unsigned NOT NULL,
+  `disk_serial` int(11) unsigned NOT NULL,
+  `type` tinyint(4) unsigned NOT NULL,
   PRIMARY KEY (`account_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -182,7 +183,7 @@ CREATE TABLE `accounts_status` (
 
 LOCK TABLES `accounts_status` WRITE;
 /*!40000 ALTER TABLE `accounts_status` DISABLE KEYS */;
-INSERT INTO `accounts_status` VALUES (1,0,0,0,-1,-1,-1,-1,0,0,0,0,0,'192.168.1.60','B4:2E:99:C7:D5:A3','2021-03-13 10:08:32',0,1519512988,NULL),(2,0,0,0,-1,-1,-1,-1,0,0,0,0,0,'192.168.1.60','B4:2E:99:C7:D5:A3','2021-03-12 13:49:34',0,1519512988,NULL);
+INSERT INTO `accounts_status` VALUES (1,0,0,0,-1,-1,-1,-1,0,0,0,0,0,'192.168.1.60','B4:2E:99:C7:D5:A3','2021-03-13 10:08:32',0,1519512988,0),(2,0,0,0,-1,-1,-1,-1,0,0,0,0,0,'192.168.1.60','B4:2E:99:C7:D5:A3','2021-03-12 13:49:34',0,1519512988,0);
 /*!40000 ALTER TABLE `accounts_status` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -195,7 +196,7 @@ DROP TABLE IF EXISTS `accounts_validation`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `accounts_validation` (
   `account_id` int(11) unsigned NOT NULL,
-  `disk_serial` int(11) unsigned DEFAULT NULL,
+  `disk_serial` int(11) unsigned NOT NULL,
   PRIMARY KEY (`account_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -219,8 +220,8 @@ DROP TABLE IF EXISTS `accounts_warning`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `accounts_warning` (
   `account_id` int(11) unsigned NOT NULL,
-  `disk_serial` int(11) unsigned DEFAULT NULL,
-  `block_date` bigint(20) DEFAULT NULL,
+  `disk_serial` int(11) unsigned NOT NULL,
+  `block_date` bigint(20) NOT NULL,
   PRIMARY KEY (`account_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -312,10 +313,10 @@ DROP TABLE IF EXISTS `character_notification`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `character_notification` (
   `server_group` smallint(6) unsigned NOT NULL,
-  `char_name` varchar(45) DEFAULT NULL,
-  `facebook_id` varchar(45) DEFAULT NULL,
-  `notification_id` varchar(45) DEFAULT NULL,
-  `notification_data` varchar(45) DEFAULT NULL,
+  `char_name` varchar(255) DEFAULT NULL,
+  `facebook_id` varchar(255) DEFAULT NULL,
+  `notification_id` varchar(255) DEFAULT NULL,
+  `notification_data` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`server_group`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -338,8 +339,8 @@ DROP TABLE IF EXISTS `item_serial`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `item_serial` (
   `server` smallint(6) unsigned NOT NULL,
-  `serial` int(11) unsigned DEFAULT NULL,
-  `serial_shop` int(11) unsigned DEFAULT NULL,
+  `serial` int(11) unsigned NOT NULL,
+  `serial_shop` int(11) unsigned NOT NULL,
   PRIMARY KEY (`server`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -386,16 +387,16 @@ DROP TABLE IF EXISTS `server_list`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `server_list` (
   `server` smallint(6) unsigned NOT NULL AUTO_INCREMENT,
-  `code` smallint(6) unsigned DEFAULT NULL,
+  `code` smallint(6) unsigned NOT NULL,
   `name` varchar(255) DEFAULT NULL,
-  `port` smallint(6) unsigned DEFAULT NULL,
-  `ip` varchar(16) DEFAULT NULL,
-  `flag` tinyint(4) unsigned DEFAULT NULL,
-  `online` tinyint(4) unsigned DEFAULT NULL,
-  `default_world` smallint(6) unsigned DEFAULT NULL,
-  `default_x` smallint(6) DEFAULT NULL,
-  `default_y` smallint(6) DEFAULT NULL,
-  `type` tinyint(4) unsigned DEFAULT NULL,
+  `port` smallint(6) unsigned NOT NULL,
+  `ip` varchar(16) NOT NULL,
+  `flag` tinyint(4) unsigned NOT NULL,
+  `online` tinyint(4) unsigned NOT NULL,
+  `default_world` smallint(6) unsigned NOT NULL,
+  `default_x` smallint(6) NOT NULL,
+  `default_y` smallint(6) NOT NULL,
+  `type` tinyint(4) unsigned NOT NULL,
   PRIMARY KEY (`server`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -419,7 +420,7 @@ DROP TABLE IF EXISTS `world_server`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `world_server` (
   `server` smallint(6) unsigned NOT NULL,
-  `world` smallint(6) unsigned DEFAULT NULL,
+  `world` smallint(6) unsigned NOT NULL,
   PRIMARY KEY (`server`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -443,4 +444,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-13 12:02:09
+-- Dump completed on 2021-03-14 11:10:50

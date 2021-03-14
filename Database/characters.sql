@@ -25,14 +25,14 @@ DROP TABLE IF EXISTS `account_buff`;
 CREATE TABLE `account_buff` (
   `account_id` int(11) unsigned NOT NULL,
   `buff` smallint(6) unsigned NOT NULL,
-  `effect_1` tinyint(4) unsigned DEFAULT NULL,
-  `value_1` int(11) DEFAULT NULL,
-  `effect_2` tinyint(4) unsigned DEFAULT NULL,
-  `value_2` int(11) DEFAULT NULL,
-  `effect_3` tinyint(4) unsigned DEFAULT NULL,
-  `value_3` int(11) DEFAULT NULL,
-  `duration` bigint(20) DEFAULT NULL,
-  `flags` tinyint(4) unsigned DEFAULT NULL,
+  `effect_1` tinyint(4) unsigned NOT NULL,
+  `value_1` int(11) NOT NULL,
+  `effect_2` tinyint(4) unsigned NOT NULL,
+  `value_2` int(11) NOT NULL,
+  `effect_3` tinyint(4) unsigned NOT NULL,
+  `value_3` int(11) NOT NULL,
+  `duration` bigint(20) NOT NULL,
+  `flags` tinyint(4) unsigned NOT NULL,
   PRIMARY KEY (`account_id`,`buff`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -54,13 +54,13 @@ DROP TABLE IF EXISTS `account_cash_shop_gift`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `account_cash_shop_gift` (
-  `account_id` int(11) unsigned DEFAULT NULL,
-  `product` int(11) unsigned DEFAULT NULL,
-  `option` int(11) unsigned DEFAULT NULL,
-  `serial` int(11) unsigned DEFAULT NULL,
-  `serial_cash_shop` int(11) unsigned DEFAULT NULL,
-  `server` smallint(6) unsigned DEFAULT NULL,
-  `date` bigint(20) DEFAULT NULL
+  `account_id` int(11) unsigned NOT NULL,
+  `product` int(11) unsigned NOT NULL,
+  `option` int(11) unsigned NOT NULL,
+  `serial` int(11) unsigned NOT NULL,
+  `serial_cash_shop` int(11) unsigned NOT NULL,
+  `server` smallint(6) unsigned NOT NULL,
+  `date` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -81,14 +81,14 @@ DROP TABLE IF EXISTS `account_cash_shop_item`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `account_cash_shop_item` (
-  `account_id` int(11) unsigned DEFAULT NULL,
-  `product` int(11) unsigned DEFAULT NULL,
-  `option` int(11) unsigned DEFAULT NULL,
-  `serial` int(11) unsigned DEFAULT NULL,
-  `serial_cash_shop` int(11) unsigned DEFAULT NULL,
-  `server` smallint(6) unsigned DEFAULT NULL,
-  `gift` tinyint(4) unsigned DEFAULT NULL,
-  `date` bigint(20) DEFAULT NULL
+  `account_id` int(11) unsigned NOT NULL,
+  `product` int(11) unsigned NOT NULL,
+  `option` int(11) unsigned NOT NULL,
+  `serial` int(11) unsigned NOT NULL,
+  `serial_cash_shop` int(11) unsigned NOT NULL,
+  `server` smallint(6) unsigned NOT NULL,
+  `gift` tinyint(4) unsigned NOT NULL,
+  `date` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -110,22 +110,22 @@ DROP TABLE IF EXISTS `account_data`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `account_data` (
   `account_id` int(11) unsigned NOT NULL,
-  `vip_status` int(11) DEFAULT NULL,
-  `vip_duration` bigint(20) DEFAULT NULL,
-  `expanded_warehouse` tinyint(4) unsigned DEFAULT NULL,
-  `expanded_warehouse_time` bigint(20) DEFAULT NULL,
-  `special_character` smallint(6) unsigned DEFAULT NULL,
-  `credits` int(11) unsigned DEFAULT NULL,
-  `web_credits` int(11) unsigned DEFAULT NULL,
-  `current_character` int(11) unsigned DEFAULT NULL,
-  `current_type` tinyint(4) unsigned DEFAULT NULL,
+  `vip_status` int(11) NOT NULL,
+  `vip_duration` bigint(20) NOT NULL,
+  `expanded_warehouse` tinyint(4) unsigned NOT NULL,
+  `expanded_warehouse_time` bigint(20) NOT NULL,
+  `special_character` smallint(6) unsigned NOT NULL,
+  `credits` int(11) unsigned NOT NULL,
+  `web_credits` int(11) unsigned NOT NULL,
+  `current_character` int(11) unsigned NOT NULL,
+  `current_type` tinyint(4) unsigned NOT NULL,
   `current_ip` varchar(16) DEFAULT NULL,
   `current_mac` varchar(50) DEFAULT NULL,
-  `current_diskserial` int(11) unsigned DEFAULT NULL,
-  `current_server` smallint(6) unsigned DEFAULT NULL,
-  `cash_shop_discount_wc` tinyint(4) unsigned DEFAULT NULL,
-  `cash_shop_discount_gp` tinyint(4) unsigned DEFAULT NULL,
-  `cash_shop_discount_date` bigint(20) DEFAULT NULL,
+  `current_diskserial` int(11) unsigned NOT NULL,
+  `current_server` smallint(6) unsigned NOT NULL,
+  `cash_shop_discount_wc` tinyint(4) unsigned NOT NULL,
+  `cash_shop_discount_gp` tinyint(4) unsigned NOT NULL,
+  `cash_shop_discount_date` bigint(20) NOT NULL,
   PRIMARY KEY (`account_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -136,7 +136,7 @@ CREATE TABLE `account_data` (
 
 LOCK TABLES `account_data` WRITE;
 /*!40000 ALTER TABLE `account_data` DISABLE KEYS */;
-INSERT INTO `account_data` VALUES (1,-1,0,0,0,0,0,NULL,4,0,'192.168.1.60','B4:2E:99:C7:D5:A3',1519512988,0,NULL,NULL,NULL),(2,-1,0,0,0,0,0,NULL,6,0,'192.168.1.60','B4:2E:99:C7:D5:A3',1519512988,0,NULL,NULL,NULL);
+INSERT INTO `account_data` VALUES (1,-1,0,0,0,0,0,0,4,0,'192.168.1.60','B4:2E:99:C7:D5:A3',1519512988,0,0,0,0),(2,-1,0,0,0,0,0,0,6,0,'192.168.1.60','B4:2E:99:C7:D5:A3',1519512988,0,0,0,0);
 /*!40000 ALTER TABLE `account_data` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -149,8 +149,8 @@ DROP TABLE IF EXISTS `account_warehouse`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `account_warehouse` (
   `account_id` int(11) unsigned NOT NULL,
-  `money` int(11) unsigned DEFAULT NULL,
-  `password` smallint(6) unsigned DEFAULT NULL,
+  `money` int(11) unsigned NOT NULL,
+  `password` smallint(6) unsigned NOT NULL,
   PRIMARY KEY (`account_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -175,7 +175,7 @@ DROP TABLE IF EXISTS `arka_war_data`;
 CREATE TABLE `arka_war_data` (
   `id` tinyint(4) unsigned NOT NULL,
   `guild` int(11) unsigned NOT NULL,
-  `attribute` tinyint(4) unsigned DEFAULT NULL,
+  `attribute` tinyint(4) unsigned NOT NULL,
   PRIMARY KEY (`id`,`guild`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -198,12 +198,12 @@ DROP TABLE IF EXISTS `castle_siege_data`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `castle_siege_data` (
   `owner` int(11) unsigned NOT NULL,
-  `status` tinyint(4) unsigned DEFAULT NULL,
-  `tax_hunt` int(11) DEFAULT NULL,
-  `tax_chaos` tinyint(4) unsigned DEFAULT NULL,
-  `tax_store` tinyint(4) unsigned DEFAULT NULL,
-  `hunt_allowed` tinyint(4) DEFAULT NULL,
-  `money` bigint(20) unsigned DEFAULT NULL,
+  `status` tinyint(4) unsigned NOT NULL,
+  `tax_hunt` int(11) NOT NULL,
+  `tax_chaos` tinyint(4) unsigned NOT NULL,
+  `tax_store` tinyint(4) unsigned NOT NULL,
+  `hunt_allowed` tinyint(4) NOT NULL,
+  `money` bigint(20) unsigned NOT NULL,
   PRIMARY KEY (`owner`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -214,7 +214,7 @@ CREATE TABLE `castle_siege_data` (
 
 LOCK TABLES `castle_siege_data` WRITE;
 /*!40000 ALTER TABLE `castle_siege_data` DISABLE KEYS */;
-INSERT INTO `castle_siege_data` VALUES (0,0,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `castle_siege_data` VALUES (0,0,0,0,0,0,0);
 /*!40000 ALTER TABLE `castle_siege_data` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -228,7 +228,7 @@ DROP TABLE IF EXISTS `castle_siege_guild`;
 CREATE TABLE `castle_siege_guild` (
   `guild` int(11) unsigned NOT NULL,
   `side` tinyint(4) unsigned NOT NULL,
-  `score` int(11) DEFAULT NULL,
+  `score` int(11) NOT NULL,
   PRIMARY KEY (`guild`,`side`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -251,11 +251,11 @@ DROP TABLE IF EXISTS `castle_siege_npc`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `castle_siege_npc` (
   `npc` smallint(6) unsigned NOT NULL,
-  `id` tinyint(4) unsigned DEFAULT NULL,
-  `defense_level` tinyint(4) unsigned DEFAULT NULL,
-  `regen_level` tinyint(4) unsigned DEFAULT NULL,
-  `life_level` tinyint(4) unsigned DEFAULT NULL,
-  `life` int(11) DEFAULT NULL,
+  `id` tinyint(4) unsigned NOT NULL,
+  `defense_level` tinyint(4) unsigned NOT NULL,
+  `regen_level` tinyint(4) unsigned NOT NULL,
+  `life_level` tinyint(4) unsigned NOT NULL,
+  `life` int(11) NOT NULL,
   PRIMARY KEY (`npc`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -278,10 +278,10 @@ DROP TABLE IF EXISTS `castle_siege_registered_guild`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `castle_siege_registered_guild` (
   `guild` int(11) unsigned NOT NULL,
-  `marks` int(11) unsigned DEFAULT NULL,
-  `register_id` int(11) unsigned DEFAULT NULL,
-  `level` smallint(6) unsigned DEFAULT NULL,
-  `level_master` smallint(6) unsigned DEFAULT NULL,
+  `marks` int(11) unsigned NOT NULL,
+  `register_id` int(11) unsigned NOT NULL,
+  `level` smallint(6) unsigned NOT NULL,
+  `level_master` smallint(6) unsigned NOT NULL,
   PRIMARY KEY (`guild`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -305,7 +305,7 @@ DROP TABLE IF EXISTS `chaos_castle_survival_hall_of_fame`;
 CREATE TABLE `chaos_castle_survival_hall_of_fame` (
   `char_id` int(11) unsigned NOT NULL,
   `char_name` varchar(255) DEFAULT NULL,
-  `score` int(11) DEFAULT NULL,
+  `score` int(11) NOT NULL,
   PRIMARY KEY (`char_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -328,7 +328,7 @@ DROP TABLE IF EXISTS `chaos_castle_survival_ranking`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `chaos_castle_survival_ranking` (
   `char_id` int(11) unsigned NOT NULL,
-  `score` bigint(20) DEFAULT NULL,
+  `score` bigint(20) NOT NULL,
   PRIMARY KEY (`char_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -352,14 +352,14 @@ DROP TABLE IF EXISTS `character_buff`;
 CREATE TABLE `character_buff` (
   `char_id` int(11) unsigned NOT NULL,
   `buff` smallint(6) unsigned NOT NULL,
-  `effect_1` tinyint(4) unsigned DEFAULT NULL,
-  `value_1` int(11) DEFAULT NULL,
-  `effect_2` tinyint(4) unsigned DEFAULT NULL,
-  `value_2` int(11) DEFAULT NULL,
-  `effect_3` tinyint(4) unsigned DEFAULT NULL,
-  `value_3` int(11) DEFAULT NULL,
-  `duration` bigint(20) DEFAULT NULL,
-  `flags` tinyint(4) unsigned DEFAULT NULL,
+  `effect_1` tinyint(4) unsigned NOT NULL,
+  `value_1` int(11) NOT NULL,
+  `effect_2` tinyint(4) unsigned NOT NULL,
+  `value_2` int(11) NOT NULL,
+  `effect_3` tinyint(4) unsigned NOT NULL,
+  `value_3` int(11) NOT NULL,
+  `duration` bigint(20) NOT NULL,
+  `flags` tinyint(4) unsigned NOT NULL,
   PRIMARY KEY (`char_id`,`buff`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -406,7 +406,7 @@ DROP TABLE IF EXISTS `character_date`;
 CREATE TABLE `character_date` (
   `char_id` int(11) unsigned NOT NULL,
   `id` int(11) unsigned NOT NULL,
-  `date` bigint(20) DEFAULT NULL,
+  `date` bigint(20) NOT NULL,
   PRIMARY KEY (`char_id`,`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -455,7 +455,7 @@ DROP TABLE IF EXISTS `character_event_count`;
 CREATE TABLE `character_event_count` (
   `char_id` int(11) unsigned NOT NULL,
   `event_id` tinyint(4) unsigned NOT NULL,
-  `count` tinyint(4) unsigned DEFAULT NULL,
+  `count` tinyint(4) unsigned NOT NULL,
   `day` tinyint(4) unsigned NOT NULL,
   PRIMARY KEY (`char_id`,`event_id`,`day`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -502,31 +502,31 @@ DROP TABLE IF EXISTS `character_gameoption`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `character_gameoption` (
   `char_id` int(11) unsigned NOT NULL,
-  `game_option` tinyint(4) unsigned DEFAULT NULL,
-  `chat_window` tinyint(4) unsigned DEFAULT NULL,
-  `q_key` tinyint(4) unsigned DEFAULT NULL,
-  `w_key` tinyint(4) unsigned DEFAULT NULL,
-  `e_key` tinyint(4) unsigned DEFAULT NULL,
-  `r_key` tinyint(4) unsigned DEFAULT NULL,
-  `qwer_level` int(11) DEFAULT NULL,
-  `skill_bind_0` smallint(6) unsigned DEFAULT NULL,
-  `skill_bind_1` smallint(6) unsigned DEFAULT NULL,
-  `skill_bind_2` smallint(6) unsigned DEFAULT NULL,
-  `skill_bind_3` smallint(6) unsigned DEFAULT NULL,
-  `skill_bind_4` smallint(6) unsigned DEFAULT NULL,
-  `skill_bind_5` smallint(6) unsigned DEFAULT NULL,
-  `skill_bind_6` smallint(6) unsigned DEFAULT NULL,
-  `skill_bind_7` smallint(6) unsigned DEFAULT NULL,
-  `skill_bind_8` smallint(6) unsigned DEFAULT NULL,
-  `skill_bind_9` smallint(6) unsigned DEFAULT NULL,
-  `extra_data` bigint(20) unsigned DEFAULT NULL,
-  `change_skin` tinyint(4) unsigned DEFAULT NULL,
-  `additional_options` smallint(6) unsigned DEFAULT NULL,
-  `button_bind_1` tinyint(4) unsigned DEFAULT NULL,
-  `button_bind_2` tinyint(4) unsigned DEFAULT NULL,
-  `button_bind_3` tinyint(4) unsigned DEFAULT NULL,
-  `button_bind_4` tinyint(4) unsigned DEFAULT NULL,
-  `button_bind_5` tinyint(4) unsigned DEFAULT NULL,
+  `game_option` tinyint(4) unsigned NOT NULL,
+  `chat_window` tinyint(4) unsigned NOT NULL,
+  `q_key` tinyint(4) unsigned NOT NULL,
+  `w_key` tinyint(4) unsigned NOT NULL,
+  `e_key` tinyint(4) unsigned NOT NULL,
+  `r_key` tinyint(4) unsigned NOT NULL,
+  `qwer_level` int(11) NOT NULL,
+  `skill_bind_0` smallint(6) unsigned NOT NULL,
+  `skill_bind_1` smallint(6) unsigned NOT NULL,
+  `skill_bind_2` smallint(6) unsigned NOT NULL,
+  `skill_bind_3` smallint(6) unsigned NOT NULL,
+  `skill_bind_4` smallint(6) unsigned NOT NULL,
+  `skill_bind_5` smallint(6) unsigned NOT NULL,
+  `skill_bind_6` smallint(6) unsigned NOT NULL,
+  `skill_bind_7` smallint(6) unsigned NOT NULL,
+  `skill_bind_8` smallint(6) unsigned NOT NULL,
+  `skill_bind_9` smallint(6) unsigned NOT NULL,
+  `extra_data` bigint(20) unsigned NOT NULL,
+  `change_skin` tinyint(4) unsigned NOT NULL,
+  `additional_options` smallint(6) unsigned NOT NULL,
+  `button_bind_1` tinyint(4) unsigned NOT NULL,
+  `button_bind_2` tinyint(4) unsigned NOT NULL,
+  `button_bind_3` tinyint(4) unsigned NOT NULL,
+  `button_bind_4` tinyint(4) unsigned NOT NULL,
+  `button_bind_5` tinyint(4) unsigned NOT NULL,
   PRIMARY KEY (`char_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -551,11 +551,11 @@ DROP TABLE IF EXISTS `character_gens`;
 CREATE TABLE `character_gens` (
   `char_id` int(11) unsigned NOT NULL,
   `family` tinyint(4) unsigned NOT NULL,
-  `level` tinyint(4) unsigned DEFAULT NULL,
-  `contribution` int(11) DEFAULT NULL,
-  `reward_date` bigint(20) DEFAULT NULL,
-  `join_date` bigint(20) DEFAULT NULL,
-  `left_date` bigint(20) DEFAULT NULL,
+  `level` tinyint(4) unsigned NOT NULL,
+  `contribution` int(11) NOT NULL,
+  `reward_date` bigint(20) NOT NULL,
+  `join_date` bigint(20) NOT NULL,
+  `left_date` bigint(20) NOT NULL,
   PRIMARY KEY (`char_id`,`family`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -578,10 +578,10 @@ DROP TABLE IF EXISTS `character_gens_kill`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `character_gens_kill` (
-  `char_id` int(11) unsigned DEFAULT NULL,
-  `killed_id` int(11) unsigned DEFAULT NULL,
-  `count` int(11) unsigned DEFAULT NULL,
-  `date` bigint(20) DEFAULT NULL
+  `char_id` int(11) unsigned NOT NULL,
+  `killed_id` int(11) unsigned NOT NULL,
+  `count` int(11) unsigned NOT NULL,
+  `date` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -603,29 +603,29 @@ DROP TABLE IF EXISTS `character_helper`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `character_helper` (
   `char_id` int(11) unsigned NOT NULL,
-  `option_flag_1` int(11) unsigned DEFAULT NULL,
-  `option_flag_2` int(11) unsigned DEFAULT NULL,
-  `item_pick_flag` tinyint(4) unsigned DEFAULT NULL,
-  `hunting_range` tinyint(4) unsigned DEFAULT NULL,
-  `item_pick_range` tinyint(4) unsigned DEFAULT NULL,
-  `distance` smallint(6) unsigned DEFAULT NULL,
-  `attack_skill_1` smallint(6) unsigned DEFAULT NULL,
-  `attack_sec_skill_1` smallint(6) unsigned DEFAULT NULL,
-  `attack_sec_skill_2` smallint(6) unsigned DEFAULT NULL,
-  `attack_sec_delay_1` smallint(6) unsigned DEFAULT NULL,
-  `attack_sec_delay_2` smallint(6) unsigned DEFAULT NULL,
-  `buff_skill_1` smallint(6) unsigned DEFAULT NULL,
-  `buff_skill_2` smallint(6) unsigned DEFAULT NULL,
-  `buff_skill_3` smallint(6) unsigned DEFAULT NULL,
-  `time_space_casting` smallint(6) unsigned DEFAULT NULL,
-  `percent_autopot` tinyint(4) unsigned DEFAULT NULL,
-  `percent_autoheal` tinyint(4) unsigned DEFAULT NULL,
-  `percent_partyheal` tinyint(4) unsigned DEFAULT NULL,
-  `percent_drainlife` tinyint(4) unsigned DEFAULT NULL,
-  `item_list` smallint(6) unsigned DEFAULT NULL,
-  `buff_item_1` smallint(6) unsigned DEFAULT NULL,
-  `buff_item_2` smallint(6) unsigned DEFAULT NULL,
-  `buff_item_3` smallint(6) unsigned DEFAULT NULL,
+  `option_flag_1` int(11) unsigned NOT NULL,
+  `option_flag_2` int(11) unsigned NOT NULL,
+  `item_pick_flag` tinyint(4) unsigned NOT NULL,
+  `hunting_range` tinyint(4) unsigned NOT NULL,
+  `item_pick_range` tinyint(4) unsigned NOT NULL,
+  `distance` smallint(6) unsigned NOT NULL,
+  `attack_skill_1` smallint(6) unsigned NOT NULL,
+  `attack_sec_skill_1` smallint(6) unsigned NOT NULL,
+  `attack_sec_skill_2` smallint(6) unsigned NOT NULL,
+  `attack_sec_delay_1` smallint(6) unsigned NOT NULL,
+  `attack_sec_delay_2` smallint(6) unsigned NOT NULL,
+  `buff_skill_1` smallint(6) unsigned NOT NULL,
+  `buff_skill_2` smallint(6) unsigned NOT NULL,
+  `buff_skill_3` smallint(6) unsigned NOT NULL,
+  `time_space_casting` smallint(6) unsigned NOT NULL,
+  `percent_autopot` tinyint(4) unsigned NOT NULL,
+  `percent_autoheal` tinyint(4) unsigned NOT NULL,
+  `percent_partyheal` tinyint(4) unsigned NOT NULL,
+  `percent_drainlife` tinyint(4) unsigned NOT NULL,
+  `item_list` smallint(6) unsigned NOT NULL,
+  `buff_item_1` smallint(6) unsigned NOT NULL,
+  `buff_item_2` smallint(6) unsigned NOT NULL,
+  `buff_item_3` smallint(6) unsigned NOT NULL,
   PRIMARY KEY (`char_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -650,16 +650,16 @@ DROP TABLE IF EXISTS `character_hunting_record`;
 CREATE TABLE `character_hunting_record` (
   `char_id` int(11) unsigned NOT NULL,
   `world` smallint(6) unsigned NOT NULL,
-  `year` smallint(6) unsigned DEFAULT NULL,
-  `month` tinyint(4) unsigned DEFAULT NULL,
-  `day` tinyint(4) unsigned DEFAULT NULL,
-  `level` int(11) unsigned DEFAULT NULL,
-  `duration` int(11) unsigned DEFAULT NULL,
-  `damage` bigint(20) unsigned DEFAULT NULL,
-  `elemental_damage` bigint(20) unsigned DEFAULT NULL,
-  `healing` int(11) unsigned DEFAULT NULL,
-  `killed_count` int(11) unsigned DEFAULT NULL,
-  `earned_experience` bigint(20) unsigned DEFAULT NULL,
+  `year` smallint(6) unsigned NOT NULL,
+  `month` tinyint(4) unsigned NOT NULL,
+  `day` tinyint(4) unsigned NOT NULL,
+  `level` int(11) unsigned NOT NULL,
+  `duration` int(11) unsigned NOT NULL,
+  `damage` bigint(20) unsigned NOT NULL,
+  `elemental_damage` bigint(20) unsigned NOT NULL,
+  `healing` int(11) unsigned NOT NULL,
+  `killed_count` int(11) unsigned NOT NULL,
+  `earned_experience` bigint(20) unsigned NOT NULL,
   PRIMARY KEY (`char_id`,`world`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -682,58 +682,59 @@ DROP TABLE IF EXISTS `character_info`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `character_info` (
   `guid` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `account_id` int(11) unsigned DEFAULT NULL,
-  `authority` tinyint(4) unsigned DEFAULT NULL,
-  `race` tinyint(4) unsigned DEFAULT NULL,
+  `account_id` int(11) unsigned NOT NULL,
+  `authority` tinyint(4) unsigned NOT NULL,
+  `race` tinyint(4) unsigned NOT NULL,
   `name` varchar(255) DEFAULT NULL,
-  `slot` tinyint(4) DEFAULT NULL,
-  `level` smallint(6) DEFAULT NULL,
-  `level_master` smallint(6) DEFAULT NULL,
-  `level_majestic` smallint(6) DEFAULT NULL,
-  `experience` bigint(20) DEFAULT NULL,
-  `experience_master` bigint(20) DEFAULT NULL,
-  `experience_majestic` bigint(20) DEFAULT NULL,
-  `points` int(11) DEFAULT NULL,
-  `points_master` int(11) DEFAULT NULL,
-  `points_majestic` int(11) DEFAULT NULL,
-  `strength` int(11) unsigned DEFAULT NULL,
-  `agility` int(11) unsigned DEFAULT NULL,
-  `vitality` int(11) unsigned DEFAULT NULL,
-  `energy` int(11) unsigned DEFAULT NULL,
-  `leadership` int(11) unsigned DEFAULT NULL,
-  `world` smallint(6) unsigned DEFAULT NULL,
-  `world_x` smallint(6) DEFAULT NULL,
-  `world_y` smallint(6) DEFAULT NULL,
-  `direction` tinyint(4) unsigned DEFAULT NULL,
-  `money` int(11) unsigned DEFAULT NULL,
-  `life` int(11) DEFAULT NULL,
-  `mana` int(11) DEFAULT NULL,
-  `shield` int(11) DEFAULT NULL,
-  `stamina` int(11) DEFAULT NULL,
-  `add_fruit_points` int(11) DEFAULT NULL,
-  `dec_fruit_points` int(11) DEFAULT NULL,
-  `expanded_inventory` tinyint(4) unsigned DEFAULT NULL,
-  `mute_time` bigint(20) DEFAULT NULL,
-  `admin_flags` int(11) unsigned DEFAULT NULL,
-  `pk_level` tinyint(4) unsigned DEFAULT NULL,
-  `pk_count` int(11) DEFAULT NULL,
-  `pk_points` int(11) DEFAULT NULL,
-  `first_time` tinyint(4) unsigned DEFAULT NULL,
-  `santa_claus_gift` bigint(20) DEFAULT NULL,
+  `slot` tinyint(4) NOT NULL,
+  `level` smallint(6) NOT NULL,
+  `level_master` smallint(6) NOT NULL,
+  `level_majestic` smallint(6) NOT NULL,
+  `experience` bigint(20) NOT NULL,
+  `experience_master` bigint(20) NOT NULL,
+  `experience_majestic` bigint(20) NOT NULL,
+  `points` int(11) NOT NULL,
+  `points_master` int(11) NOT NULL,
+  `points_majestic` int(11) NOT NULL,
+  `strength` int(11) unsigned NOT NULL,
+  `agility` int(11) unsigned NOT NULL,
+  `vitality` int(11) unsigned NOT NULL,
+  `energy` int(11) unsigned NOT NULL,
+  `leadership` int(11) unsigned NOT NULL,
+  `world` smallint(6) unsigned NOT NULL,
+  `world_x` smallint(6) NOT NULL,
+  `world_y` smallint(6) NOT NULL,
+  `money` int(11) unsigned NOT NULL,
+  `direction` tinyint(4) unsigned NOT NULL,
+  `life` int(11) NOT NULL,
+  `mana` int(11) NOT NULL,
+  `shield` int(11) NOT NULL,
+  `stamina` int(11) NOT NULL,
+  `add_fruit_points` int(11) NOT NULL,
+  `dec_fruit_points` int(11) NOT NULL,
+  `expanded_inventory` tinyint(4) unsigned NOT NULL,
+  `mute_time` bigint(20) NOT NULL,
+  `admin_flags` int(11) unsigned NOT NULL,
+  `pk_level` tinyint(4) unsigned NOT NULL,
+  `pk_count` int(11) NOT NULL,
+  `pk_points` int(11) NOT NULL,
+  `first_time` tinyint(4) unsigned NOT NULL,
+  `santa_claus_gift` bigint(20) NOT NULL,
   `personal_store_name` varchar(255) DEFAULT NULL,
-  `personal_store_open` tinyint(4) DEFAULT NULL,
-  `goblin_points` int(11) unsigned DEFAULT NULL,
-  `last_use` bigint(20) DEFAULT NULL,
-  `kick_time` bigint(20) DEFAULT NULL,
-  `post_count` int(11) DEFAULT NULL,
-  `post_day` tinyint(4) unsigned DEFAULT NULL,
-  `post_month` tinyint(4) unsigned DEFAULT NULL,
-  `ruud_money` int(11) unsigned DEFAULT NULL,
-  `hunting_log_visible` tinyint(4) unsigned DEFAULT NULL,
-  `create_date` bigint(20) DEFAULT NULL,
-  `online` tinyint(4) DEFAULT NULL,
-  `server_code` smallint(6) unsigned DEFAULT NULL,
-  PRIMARY KEY (`guid`)
+  `personal_store_open` tinyint(4) NOT NULL,
+  `goblin_points` int(11) unsigned NOT NULL,
+  `last_use` bigint(20) NOT NULL,
+  `kick_time` bigint(20) NOT NULL,
+  `post_count` int(11) NOT NULL,
+  `post_day` tinyint(4) unsigned NOT NULL,
+  `post_month` tinyint(4) unsigned NOT NULL,
+  `ruud_money` int(11) unsigned NOT NULL,
+  `hunting_log_visible` tinyint(4) unsigned NOT NULL,
+  `create_date` bigint(20) NOT NULL,
+  `online` tinyint(4) unsigned NOT NULL,
+  `server_code` smallint(6) unsigned NOT NULL,
+  PRIMARY KEY (`guid`),
+  UNIQUE KEY `name_UNIQUE` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -743,7 +744,7 @@ CREATE TABLE `character_info` (
 
 LOCK TABLES `character_info` WRITE;
 /*!40000 ALTER TABLE `character_info` DISABLE KEYS */;
-INSERT INTO `character_info` VALUES (4,1,0,16,'test',0,1,0,0,0,0,0,30,0,0,60,60,50,50,0,0,143,122,3,0,185,80,0,86,0,0,0,0,0,0,0,0,0,0,'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=',0,0,1615619342,1615473057,0,0,0,0,0,NULL,0,65535),(5,1,0,112,'grow',1,1,0,0,0,0,0,0,0,0,30,30,25,24,0,0,145,140,5,0,110,40,0,42,0,0,0,0,0,0,0,0,0,0,'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=',0,0,1615546544,1615503467,0,0,0,0,0,NULL,0,65535),(6,2,0,160,'guntest',0,1,0,0,0,0,0,0,0,0,20,18,20,25,0,0,146,140,3,0,100,80,0,31,0,0,0,0,0,0,0,0,0,0,'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=',0,0,1615546540,1615546185,0,0,0,0,0,NULL,0,65535);
+INSERT INTO `character_info` VALUES (4,1,0,16,'test',0,1,0,0,0,0,0,30,0,0,60,60,50,50,0,0,143,122,0,3,185,80,0,86,0,0,0,0,0,0,0,0,0,0,'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=',0,0,1615619342,1615473057,0,0,0,0,0,0,0,65535),(5,1,0,112,'grow',1,1,0,0,0,0,0,0,0,0,30,30,25,24,0,0,145,140,0,5,110,40,0,42,0,0,0,0,0,0,0,0,0,0,'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=',0,0,1615546544,1615503467,0,0,0,0,0,0,0,65535),(6,2,0,160,'guntest',0,1,0,0,0,0,0,0,0,0,20,18,20,25,0,0,146,140,0,3,100,80,0,31,0,0,0,0,0,0,0,0,0,0,'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=',0,0,1615546540,1615546185,0,0,0,0,0,0,0,65535);
 /*!40000 ALTER TABLE `character_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -755,9 +756,9 @@ DROP TABLE IF EXISTS `character_item_delay`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `character_item_delay` (
-  `char_id` int(11) unsigned DEFAULT NULL,
-  `item` smallint(6) unsigned DEFAULT NULL,
-  `date` bigint(20) DEFAULT NULL
+  `char_id` int(11) unsigned NOT NULL,
+  `item` smallint(6) unsigned NOT NULL,
+  `date` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -779,14 +780,14 @@ DROP TABLE IF EXISTS `character_jewel_bingo`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `character_jewel_bingo` (
   `char_id` int(11) unsigned NOT NULL,
-  `state` tinyint(4) unsigned DEFAULT NULL,
-  `box` tinyint(4) unsigned DEFAULT NULL,
-  `count` tinyint(4) unsigned DEFAULT NULL,
-  `jewel` tinyint(4) unsigned DEFAULT NULL,
-  `score1` int(11) DEFAULT NULL,
-  `score2` int(11) DEFAULT NULL,
-  `score3` int(11) DEFAULT NULL,
-  `date` bigint(20) DEFAULT NULL,
+  `state` tinyint(4) unsigned NOT NULL,
+  `box` tinyint(4) unsigned NOT NULL,
+  `count` tinyint(4) unsigned NOT NULL,
+  `jewel` tinyint(4) unsigned NOT NULL,
+  `score1` int(11) NOT NULL,
+  `score2` int(11) NOT NULL,
+  `score3` int(11) NOT NULL,
+  `date` bigint(20) NOT NULL,
   PRIMARY KEY (`char_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -810,9 +811,9 @@ DROP TABLE IF EXISTS `character_jewel_bingo_grid`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `character_jewel_bingo_grid` (
   `char_id` int(11) unsigned NOT NULL,
-  `type` tinyint(4) unsigned DEFAULT NULL,
-  `slot` tinyint(4) unsigned DEFAULT NULL,
-  `value` tinyint(4) unsigned DEFAULT NULL,
+  `type` tinyint(4) unsigned NOT NULL,
+  `slot` tinyint(4) unsigned NOT NULL,
+  `value` tinyint(4) unsigned NOT NULL,
   PRIMARY KEY (`char_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -858,16 +859,16 @@ DROP TABLE IF EXISTS `character_labyrinth`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `character_labyrinth` (
   `char_id` int(11) unsigned NOT NULL,
-  `stage` tinyint(4) unsigned DEFAULT NULL,
-  `id` tinyint(4) unsigned DEFAULT NULL,
-  `level` smallint(6) unsigned DEFAULT NULL,
-  `status` tinyint(4) unsigned DEFAULT NULL,
-  `killed_monsters` int(11) DEFAULT NULL,
-  `earned_experience` bigint(20) DEFAULT NULL,
-  `completed_missions` int(11) DEFAULT NULL,
-  `date` bigint(20) DEFAULT NULL,
-  `goblin_state` tinyint(4) unsigned DEFAULT NULL,
-  `day_first` tinyint(4) unsigned DEFAULT NULL,
+  `stage` tinyint(4) unsigned NOT NULL,
+  `id` tinyint(4) unsigned NOT NULL,
+  `level` smallint(6) unsigned NOT NULL,
+  `status` tinyint(4) unsigned NOT NULL,
+  `killed_monsters` int(11) NOT NULL,
+  `earned_experience` bigint(20) NOT NULL,
+  `completed_missions` int(11) NOT NULL,
+  `date` bigint(20) NOT NULL,
+  `goblin_state` tinyint(4) unsigned NOT NULL,
+  `day_first` tinyint(4) unsigned NOT NULL,
   PRIMARY KEY (`char_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -891,8 +892,8 @@ DROP TABLE IF EXISTS `character_labyrinth_level`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `character_labyrinth_level` (
   `char_id` int(11) unsigned NOT NULL,
-  `level` smallint(6) unsigned DEFAULT NULL,
-  `amount` int(11) DEFAULT NULL,
+  `level` smallint(6) unsigned NOT NULL,
+  `amount` int(11) NOT NULL,
   PRIMARY KEY (`char_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -917,16 +918,16 @@ CREATE TABLE `character_labyrinth_zone` (
   `char_id` int(11) unsigned NOT NULL,
   `idx` tinyint(4) unsigned NOT NULL,
   `subidx` tinyint(4) unsigned NOT NULL,
-  `mission_id_1` tinyint(4) unsigned DEFAULT NULL,
-  `mission_id_2` tinyint(4) unsigned DEFAULT NULL,
-  `mission_id_3` tinyint(4) unsigned DEFAULT NULL,
-  `mission_id_4` tinyint(4) unsigned DEFAULT NULL,
-  `mission_id_5` tinyint(4) unsigned DEFAULT NULL,
-  `mission_count_1` int(11) DEFAULT NULL,
-  `mission_count_2` int(11) DEFAULT NULL,
-  `mission_count_3` int(11) DEFAULT NULL,
-  `mission_count_4` int(11) DEFAULT NULL,
-  `mission_count_5` int(11) DEFAULT NULL,
+  `mission_id_1` tinyint(4) unsigned NOT NULL,
+  `mission_id_2` tinyint(4) unsigned NOT NULL,
+  `mission_id_3` tinyint(4) unsigned NOT NULL,
+  `mission_id_4` tinyint(4) unsigned NOT NULL,
+  `mission_id_5` tinyint(4) unsigned NOT NULL,
+  `mission_count_1` int(11) NOT NULL,
+  `mission_count_2` int(11) NOT NULL,
+  `mission_count_3` int(11) NOT NULL,
+  `mission_count_4` int(11) NOT NULL,
+  `mission_count_5` int(11) NOT NULL,
   PRIMARY KEY (`char_id`,`idx`,`subidx`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -949,16 +950,16 @@ DROP TABLE IF EXISTS `character_mail`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `character_mail` (
   `id` int(11) unsigned NOT NULL,
-  `char_id` int(11) unsigned DEFAULT NULL,
+  `char_id` int(11) unsigned NOT NULL,
   `from_id` varchar(255) DEFAULT NULL,
   `subject` varchar(255) DEFAULT NULL,
   `message` varchar(255) DEFAULT NULL,
-  `direction` tinyint(4) unsigned DEFAULT NULL,
-  `action` tinyint(4) unsigned DEFAULT NULL,
+  `direction` tinyint(4) unsigned NOT NULL,
+  `action` tinyint(4) unsigned NOT NULL,
   `photo` varchar(255) DEFAULT NULL,
-  `window_guid` int(11) unsigned DEFAULT NULL,
-  `date` bigint(20) DEFAULT NULL,
-  `opened` tinyint(4) unsigned DEFAULT NULL,
+  `window_guid` int(11) unsigned NOT NULL,
+  `date` bigint(20) NOT NULL,
+  `opened` tinyint(4) unsigned NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -982,7 +983,7 @@ DROP TABLE IF EXISTS `character_majestic_stats`;
 CREATE TABLE `character_majestic_stats` (
   `char_id` int(11) unsigned NOT NULL,
   `id` tinyint(4) unsigned NOT NULL,
-  `level` smallint(6) unsigned DEFAULT NULL,
+  `level` smallint(6) unsigned NOT NULL,
   PRIMARY KEY (`char_id`,`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1006,10 +1007,10 @@ DROP TABLE IF EXISTS `character_majestic_tree`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `character_majestic_tree` (
   `char_id` int(11) unsigned NOT NULL,
-  `type` tinyint(4) unsigned DEFAULT NULL,
-  `section` tinyint(4) unsigned DEFAULT NULL,
+  `type` tinyint(4) unsigned NOT NULL,
+  `section` tinyint(4) unsigned NOT NULL,
   `id` smallint(6) unsigned NOT NULL,
-  `level` tinyint(4) unsigned DEFAULT NULL,
+  `level` tinyint(4) unsigned NOT NULL,
   PRIMARY KEY (`char_id`,`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1032,10 +1033,10 @@ DROP TABLE IF EXISTS `character_mini_bomb`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `character_mini_bomb` (
   `char_id` int(11) unsigned NOT NULL,
-  `state` tinyint(4) unsigned DEFAULT NULL,
-  `score` smallint(6) unsigned DEFAULT NULL,
-  `total_score` int(11) DEFAULT NULL,
-  `cdate` bigint(20) DEFAULT NULL,
+  `state` tinyint(4) unsigned NOT NULL,
+  `score` smallint(6) unsigned NOT NULL,
+  `total_score` int(11) NOT NULL,
+  `cdate` bigint(20) NOT NULL,
   PRIMARY KEY (`char_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1059,9 +1060,9 @@ DROP TABLE IF EXISTS `character_mini_bomb_grid`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `character_mini_bomb_grid` (
   `char_id` int(11) unsigned NOT NULL,
-  `cell` tinyint(4) unsigned DEFAULT NULL,
-  `value` tinyint(4) unsigned DEFAULT NULL,
-  `status` tinyint(4) unsigned DEFAULT NULL,
+  `cell` tinyint(4) unsigned NOT NULL,
+  `value` tinyint(4) unsigned NOT NULL,
+  `status` tinyint(4) unsigned NOT NULL,
   PRIMARY KEY (`char_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1084,9 +1085,9 @@ DROP TABLE IF EXISTS `character_monster_soul`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `character_monster_soul` (
   `char_id` int(11) unsigned NOT NULL,
-  `type` int(11) unsigned DEFAULT NULL,
+  `type` int(11) unsigned NOT NULL,
   `id` int(11) unsigned NOT NULL,
-  `amount` int(11) DEFAULT NULL,
+  `amount` int(11) NOT NULL,
   PRIMARY KEY (`char_id`,`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1109,12 +1110,12 @@ DROP TABLE IF EXISTS `character_mu_roomy`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `character_mu_roomy` (
   `char_id` int(11) unsigned NOT NULL,
-  `playing` tinyint(4) unsigned DEFAULT NULL,
-  `type` tinyint(4) unsigned DEFAULT NULL,
-  `score` smallint(6) unsigned DEFAULT NULL,
-  `card_count` tinyint(4) unsigned DEFAULT NULL,
-  `special_card_count` tinyint(4) unsigned DEFAULT NULL,
-  `date` bigint(20) DEFAULT NULL,
+  `playing` tinyint(4) unsigned NOT NULL,
+  `type` tinyint(4) unsigned NOT NULL,
+  `score` smallint(6) unsigned NOT NULL,
+  `card_count` tinyint(4) unsigned NOT NULL,
+  `special_card_count` tinyint(4) unsigned NOT NULL,
+  `date` bigint(20) NOT NULL,
   PRIMARY KEY (`char_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1137,13 +1138,13 @@ DROP TABLE IF EXISTS `character_mu_roomy_deck`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `character_mu_roomy_deck` (
-  `char_id` int(11) unsigned DEFAULT NULL,
-  `type` tinyint(4) unsigned DEFAULT NULL,
-  `slot` tinyint(4) unsigned DEFAULT NULL,
-  `color` tinyint(4) unsigned DEFAULT NULL,
-  `number` tinyint(4) unsigned DEFAULT NULL,
-  `state` tinyint(4) unsigned DEFAULT NULL,
-  `play_slot` tinyint(4) unsigned DEFAULT NULL
+  `char_id` int(11) unsigned NOT NULL,
+  `type` tinyint(4) unsigned NOT NULL,
+  `slot` tinyint(4) unsigned NOT NULL,
+  `color` tinyint(4) unsigned NOT NULL,
+  `number` tinyint(4) unsigned NOT NULL,
+  `state` tinyint(4) unsigned NOT NULL,
+  `play_slot` tinyint(4) unsigned NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -1165,11 +1166,11 @@ DROP TABLE IF EXISTS `character_numeric_baseball`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `character_numeric_baseball` (
   `char_id` int(11) unsigned NOT NULL,
-  `state` tinyint(4) unsigned DEFAULT NULL,
-  `score` int(11) DEFAULT NULL,
-  `number_1` tinyint(4) unsigned DEFAULT NULL,
-  `number_2` tinyint(4) unsigned DEFAULT NULL,
-  `number_3` tinyint(4) unsigned DEFAULT NULL,
+  `state` tinyint(4) unsigned NOT NULL,
+  `score` int(11) NOT NULL,
+  `number_1` tinyint(4) unsigned NOT NULL,
+  `number_2` tinyint(4) unsigned NOT NULL,
+  `number_3` tinyint(4) unsigned NOT NULL,
   `numbers` varchar(255) DEFAULT NULL,
   `strikes` varchar(255) DEFAULT NULL,
   `balls` varchar(255) DEFAULT NULL,
@@ -1197,12 +1198,12 @@ DROP TABLE IF EXISTS `character_quest_evo`;
 CREATE TABLE `character_quest_evo` (
   `char_id` int(11) unsigned NOT NULL,
   `id` tinyint(4) unsigned NOT NULL,
-  `state` tinyint(4) unsigned DEFAULT NULL,
-  `kill_count_1` int(11) DEFAULT NULL,
-  `kill_count_2` int(11) DEFAULT NULL,
-  `kill_count_3` int(11) DEFAULT NULL,
-  `kill_count_4` int(11) DEFAULT NULL,
-  `kill_count_5` int(11) DEFAULT NULL,
+  `state` tinyint(4) unsigned NOT NULL,
+  `kill_count_1` int(11) NOT NULL,
+  `kill_count_2` int(11) NOT NULL,
+  `kill_count_3` int(11) NOT NULL,
+  `kill_count_4` int(11) NOT NULL,
+  `kill_count_5` int(11) NOT NULL,
   PRIMARY KEY (`char_id`,`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1226,9 +1227,9 @@ DROP TABLE IF EXISTS `character_quest_guided`;
 CREATE TABLE `character_quest_guided` (
   `char_id` int(11) unsigned NOT NULL,
   `quest` smallint(6) unsigned NOT NULL,
-  `count` int(11) DEFAULT NULL,
-  `state` tinyint(4) unsigned DEFAULT NULL,
-  `date` bigint(20) DEFAULT NULL,
+  `count` int(11) NOT NULL,
+  `state` tinyint(4) unsigned NOT NULL,
+  `date` bigint(20) NOT NULL,
   PRIMARY KEY (`char_id`,`quest`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1253,9 +1254,9 @@ DROP TABLE IF EXISTS `character_quest_mu`;
 CREATE TABLE `character_quest_mu` (
   `char_id` int(11) unsigned NOT NULL,
   `quest_id` smallint(6) unsigned NOT NULL,
-  `state` tinyint(4) unsigned DEFAULT NULL,
-  `objective` smallint(6) unsigned DEFAULT NULL,
-  `date` bigint(20) DEFAULT NULL,
+  `state` tinyint(4) unsigned NOT NULL,
+  `objective` smallint(6) unsigned NOT NULL,
+  `date` bigint(20) NOT NULL,
   PRIMARY KEY (`char_id`,`quest_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1278,8 +1279,8 @@ DROP TABLE IF EXISTS `character_restriction`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `character_restriction` (
   `char_id` int(11) unsigned NOT NULL,
-  `restriction` int(11) unsigned DEFAULT NULL,
-  `time` bigint(20) DEFAULT NULL,
+  `restriction` int(11) unsigned NOT NULL,
+  `time` bigint(20) NOT NULL,
   `admin_name` varchar(255) DEFAULT NULL,
   `reason` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`char_id`)
@@ -1304,9 +1305,9 @@ DROP TABLE IF EXISTS `character_score`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `character_score` (
   `char_id` int(11) unsigned NOT NULL,
-  `type` tinyint(4) unsigned DEFAULT NULL,
-  `level` int(11) DEFAULT NULL,
-  `score` int(11) DEFAULT NULL,
+  `type` tinyint(4) unsigned NOT NULL,
+  `level` int(11) NOT NULL,
+  `score` int(11) NOT NULL,
   PRIMARY KEY (`char_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1329,9 +1330,9 @@ DROP TABLE IF EXISTS `character_skill`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `character_skill` (
   `char_id` int(11) unsigned NOT NULL,
-  `type` tinyint(4) unsigned DEFAULT NULL,
+  `type` tinyint(4) unsigned NOT NULL,
   `skill` smallint(6) unsigned NOT NULL,
-  `skill_level` tinyint(4) unsigned DEFAULT NULL,
+  `skill_level` tinyint(4) unsigned NOT NULL,
   PRIMARY KEY (`char_id`,`skill`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1355,7 +1356,7 @@ DROP TABLE IF EXISTS `character_statistics`;
 CREATE TABLE `character_statistics` (
   `char_id` int(11) unsigned NOT NULL,
   `statistic_id` int(11) unsigned NOT NULL,
-  `count` bigint(20) unsigned DEFAULT NULL,
+  `count` bigint(20) unsigned NOT NULL,
   PRIMARY KEY (`char_id`,`statistic_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1378,9 +1379,9 @@ DROP TABLE IF EXISTS `character_warp_favorite_list`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `character_warp_favorite_list` (
   `char_id` int(11) unsigned NOT NULL,
-  `slot` tinyint(4) unsigned DEFAULT NULL,
-  `data` smallint(6) unsigned DEFAULT NULL,
-  `warp_id` smallint(6) unsigned DEFAULT NULL,
+  `slot` tinyint(4) unsigned NOT NULL,
+  `data` smallint(6) unsigned NOT NULL,
+  `warp_id` smallint(6) unsigned NOT NULL,
   PRIMARY KEY (`char_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1426,21 +1427,21 @@ DROP TABLE IF EXISTS `event_arka_war_kill`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `event_arka_war_kill` (
-  `char_id` int(11) unsigned DEFAULT NULL,
+  `char_id` int(11) unsigned NOT NULL,
   `char_name` varchar(255) DEFAULT NULL,
-  `char_rank` tinyint(4) unsigned DEFAULT NULL,
+  `char_rank` tinyint(4) unsigned NOT NULL,
   `player_data_01` varchar(255) DEFAULT NULL,
-  `guild_id_01` int(11) unsigned DEFAULT NULL,
+  `guild_id_01` int(11) unsigned NOT NULL,
   `guild_name_01` varchar(255) DEFAULT NULL,
-  `killer_id` int(11) unsigned DEFAULT NULL,
+  `killer_id` int(11) unsigned NOT NULL,
   `killer_name` varchar(255) DEFAULT NULL,
-  `killer_rank` tinyint(4) unsigned DEFAULT NULL,
+  `killer_rank` tinyint(4) unsigned NOT NULL,
   `player_data_02` varchar(255) DEFAULT NULL,
-  `guild_id_02` int(11) unsigned DEFAULT NULL,
+  `guild_id_02` int(11) unsigned NOT NULL,
   `guild_name_02` varchar(255) DEFAULT NULL,
-  `world` smallint(6) unsigned DEFAULT NULL,
-  `world_x` smallint(6) DEFAULT NULL,
-  `world_y` smallint(6) DEFAULT NULL
+  `world` smallint(6) unsigned NOT NULL,
+  `world_x` smallint(6) NOT NULL,
+  `world_y` smallint(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -1461,11 +1462,11 @@ DROP TABLE IF EXISTS `event_arka_war_ranking`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `event_arka_war_ranking` (
-  `guild_id_01` int(11) unsigned DEFAULT NULL,
+  `guild_id_01` int(11) unsigned NOT NULL,
   `guild_name_01` varchar(255) DEFAULT NULL,
-  `guild_id_02` int(11) unsigned DEFAULT NULL,
+  `guild_id_02` int(11) unsigned NOT NULL,
   `guild_name_02` varchar(255) DEFAULT NULL,
-  `character_count` int(11) DEFAULT NULL
+  `character_count` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -1486,22 +1487,22 @@ DROP TABLE IF EXISTS `event_castle_siege_kill`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `event_castle_siege_kill` (
-  `char_id` int(11) unsigned DEFAULT NULL,
+  `char_id` int(11) unsigned NOT NULL,
   `char_name` varchar(255) DEFAULT NULL,
-  `char_rank` tinyint(4) unsigned DEFAULT NULL,
-  `state` tinyint(4) unsigned DEFAULT NULL,
+  `char_rank` tinyint(4) unsigned NOT NULL,
+  `state` tinyint(4) unsigned NOT NULL,
   `player_data_01` varchar(255) DEFAULT NULL,
-  `guild_id_01` int(11) unsigned DEFAULT NULL,
+  `guild_id_01` int(11) unsigned NOT NULL,
   `guild_name_01` varchar(255) DEFAULT NULL,
-  `killer_id` int(11) unsigned DEFAULT NULL,
+  `killer_id` int(11) unsigned NOT NULL,
   `killer_name` varchar(255) DEFAULT NULL,
-  `killer_rank` tinyint(4) unsigned DEFAULT NULL,
+  `killer_rank` tinyint(4) unsigned NOT NULL,
   `player_data_02` varchar(255) DEFAULT NULL,
-  `guild_id_02` int(11) unsigned DEFAULT NULL,
+  `guild_id_02` int(11) unsigned NOT NULL,
   `guild_name_02` varchar(255) DEFAULT NULL,
-  `world` smallint(6) unsigned DEFAULT NULL,
-  `world_x` smallint(6) DEFAULT NULL,
-  `world_y` smallint(6) DEFAULT NULL
+  `world` smallint(6) unsigned NOT NULL,
+  `world_x` smallint(6) NOT NULL,
+  `world_y` smallint(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -1524,7 +1525,7 @@ DROP TABLE IF EXISTS `event_castle_siege_ranking`;
 CREATE TABLE `event_castle_siege_ranking` (
   `guild_id` int(11) unsigned NOT NULL,
   `guild_name` varchar(255) DEFAULT NULL,
-  `character_count` int(11) DEFAULT NULL,
+  `character_count` int(11) NOT NULL,
   PRIMARY KEY (`guild_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1546,14 +1547,14 @@ DROP TABLE IF EXISTS `event_castle_siege_time`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `event_castle_siege_time` (
-  `char_id` int(11) unsigned DEFAULT NULL,
+  `char_id` int(11) unsigned NOT NULL,
   `char_name` varchar(255) DEFAULT NULL,
-  `char_rank` tinyint(4) unsigned DEFAULT NULL,
+  `char_rank` tinyint(4) unsigned NOT NULL,
   `player_data` varchar(255) DEFAULT NULL,
-  `guild_id` int(11) unsigned DEFAULT NULL,
+  `guild_id` int(11) unsigned NOT NULL,
   `guild_name` varchar(255) DEFAULT NULL,
-  `type` tinyint(4) unsigned DEFAULT NULL,
-  `time` int(11) unsigned DEFAULT NULL
+  `type` tinyint(4) unsigned NOT NULL,
+  `time` int(11) unsigned NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -1575,8 +1576,8 @@ DROP TABLE IF EXISTS `event_dungeon_instance`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `event_dungeon_instance` (
   `char_id` int(11) unsigned NOT NULL,
-  `id` tinyint(4) unsigned DEFAULT NULL,
-  `time` bigint(20) DEFAULT NULL,
+  `id` tinyint(4) unsigned NOT NULL,
+  `time` bigint(20) NOT NULL,
   PRIMARY KEY (`char_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1599,10 +1600,10 @@ DROP TABLE IF EXISTS `event_jewel_bingo_ranking`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `event_jewel_bingo_ranking` (
   `char_id` int(11) unsigned NOT NULL,
-  `type` tinyint(4) unsigned DEFAULT NULL,
-  `score1` int(11) DEFAULT NULL,
-  `score2` int(11) DEFAULT NULL,
-  `score3` int(11) DEFAULT NULL,
+  `type` tinyint(4) unsigned NOT NULL,
+  `score1` int(11) NOT NULL,
+  `score2` int(11) NOT NULL,
+  `score3` int(11) NOT NULL,
   PRIMARY KEY (`char_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1627,10 +1628,10 @@ CREATE TABLE `event_labyrinth_league` (
   `category` tinyint(4) unsigned NOT NULL,
   `char_id` int(11) unsigned NOT NULL,
   `char_name` varchar(255) DEFAULT NULL,
-  `char_class` tinyint(4) unsigned DEFAULT NULL,
-  `score` int(11) DEFAULT NULL,
-  `league_score` int(11) DEFAULT NULL,
-  `time` bigint(20) DEFAULT NULL,
+  `char_class` tinyint(4) unsigned NOT NULL,
+  `score` int(11) NOT NULL,
+  `league_score` int(11) NOT NULL,
+  `time` bigint(20) NOT NULL,
   PRIMARY KEY (`char_id`,`category`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1653,8 +1654,8 @@ DROP TABLE IF EXISTS `event_labyrinth_schedule`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `event_labyrinth_schedule` (
   `server` smallint(6) unsigned NOT NULL,
-  `state` tinyint(4) unsigned DEFAULT NULL,
-  `start_date` bigint(20) DEFAULT NULL,
+  `state` tinyint(4) unsigned NOT NULL,
+  `start_date` bigint(20) NOT NULL,
   PRIMARY KEY (`server`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1677,10 +1678,10 @@ DROP TABLE IF EXISTS `event_mini_bomb_ranking`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `event_mini_bomb_ranking` (
   `char_id` int(11) unsigned NOT NULL,
-  `state` tinyint(4) unsigned DEFAULT NULL,
-  `score` smallint(6) unsigned DEFAULT NULL,
-  `bombs_founded` tinyint(4) unsigned DEFAULT NULL,
-  `bombs_failed` tinyint(4) unsigned DEFAULT NULL,
+  `state` tinyint(4) unsigned NOT NULL,
+  `score` smallint(6) unsigned NOT NULL,
+  `bombs_founded` tinyint(4) unsigned NOT NULL,
+  `bombs_failed` tinyint(4) unsigned NOT NULL,
   PRIMARY KEY (`char_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1703,10 +1704,10 @@ DROP TABLE IF EXISTS `event_mu_roomy_ranking`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `event_mu_roomy_ranking` (
   `char_id` int(11) unsigned NOT NULL,
-  `type` tinyint(4) unsigned DEFAULT NULL,
-  `score` smallint(6) unsigned DEFAULT NULL,
-  `remain_card` tinyint(4) unsigned DEFAULT NULL,
-  `remain_special_card` tinyint(4) unsigned DEFAULT NULL,
+  `type` tinyint(4) unsigned NOT NULL,
+  `score` smallint(6) unsigned NOT NULL,
+  `remain_card` tinyint(4) unsigned NOT NULL,
+  `remain_special_card` tinyint(4) unsigned NOT NULL,
   PRIMARY KEY (`char_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1729,7 +1730,7 @@ DROP TABLE IF EXISTS `event_numeric_baseball_ranking`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `event_numeric_baseball_ranking` (
   `char_id` int(11) unsigned NOT NULL,
-  `score` int(11) DEFAULT NULL,
+  `score` int(11) NOT NULL,
   PRIMARY KEY (`char_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1776,9 +1777,9 @@ DROP TABLE IF EXISTS `event_ranking`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `event_ranking` (
   `event_id` tinyint(4) unsigned NOT NULL,
-  `event_ground` tinyint(4) unsigned DEFAULT NULL,
+  `event_ground` tinyint(4) unsigned NOT NULL,
   `char_id` int(11) unsigned NOT NULL,
-  `score` bigint(20) DEFAULT NULL,
+  `score` bigint(20) NOT NULL,
   PRIMARY KEY (`event_id`,`char_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1801,13 +1802,13 @@ DROP TABLE IF EXISTS `event_ranking_labyrinth`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `event_ranking_labyrinth` (
   `char_id` int(11) unsigned NOT NULL,
-  `level` smallint(6) unsigned DEFAULT NULL,
-  `stage` tinyint(4) unsigned DEFAULT NULL,
-  `index` tinyint(4) unsigned DEFAULT NULL,
-  `killed_monsters` int(11) DEFAULT NULL,
-  `earned_experience` bigint(20) DEFAULT NULL,
-  `completed_missions` int(11) DEFAULT NULL,
-  `score` int(11) DEFAULT NULL,
+  `level` smallint(6) unsigned NOT NULL,
+  `stage` tinyint(4) unsigned NOT NULL,
+  `index` tinyint(4) unsigned NOT NULL,
+  `killed_monsters` int(11) NOT NULL,
+  `earned_experience` bigint(20) NOT NULL,
+  `completed_missions` int(11) NOT NULL,
+  `score` int(11) NOT NULL,
   PRIMARY KEY (`char_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1854,7 +1855,7 @@ DROP TABLE IF EXISTS `event_stage`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `event_stage` (
   `event_id` tinyint(4) unsigned NOT NULL,
-  `stage` tinyint(4) unsigned DEFAULT NULL,
+  `stage` tinyint(4) unsigned NOT NULL,
   PRIMARY KEY (`event_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1878,10 +1879,10 @@ DROP TABLE IF EXISTS `gen_ranking`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `gen_ranking` (
   `family` tinyint(4) unsigned NOT NULL,
-  `level` tinyint(4) unsigned DEFAULT NULL,
-  `type` tinyint(4) unsigned DEFAULT NULL,
-  `score` int(11) DEFAULT NULL,
-  `ranking` int(11) DEFAULT NULL,
+  `level` tinyint(4) unsigned NOT NULL,
+  `type` tinyint(4) unsigned NOT NULL,
+  `score` int(11) NOT NULL,
+  `ranking` int(11) NOT NULL,
   `char_id` int(11) unsigned NOT NULL,
   PRIMARY KEY (`family`,`char_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -1907,10 +1908,10 @@ CREATE TABLE `guild_list` (
   `guid` int(11) unsigned NOT NULL,
   `name` varchar(255) DEFAULT NULL,
   `emblem` varchar(255) DEFAULT NULL,
-  `hostil` int(11) unsigned DEFAULT NULL,
-  `alliance` int(11) unsigned DEFAULT NULL,
+  `hostil` int(11) unsigned NOT NULL,
+  `alliance` int(11) unsigned NOT NULL,
   `notice` varchar(255) DEFAULT NULL,
-  `score` int(11) DEFAULT NULL,
+  `score` int(11) NOT NULL,
   PRIMARY KEY (`guid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1934,10 +1935,10 @@ DROP TABLE IF EXISTS `guild_matching`;
 CREATE TABLE `guild_matching` (
   `guild_id` int(11) unsigned NOT NULL,
   `text` varchar(255) DEFAULT NULL,
-  `interest_type` tinyint(4) unsigned DEFAULT NULL,
-  `level_range` tinyint(4) unsigned DEFAULT NULL,
-  `class_type` smallint(6) unsigned DEFAULT NULL,
-  `board_number` int(11) unsigned DEFAULT NULL,
+  `interest_type` tinyint(4) unsigned NOT NULL,
+  `level_range` tinyint(4) unsigned NOT NULL,
+  `class_type` smallint(6) unsigned NOT NULL,
+  `board_number` int(11) unsigned NOT NULL,
   PRIMARY KEY (`guild_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1961,8 +1962,8 @@ DROP TABLE IF EXISTS `guild_members`;
 CREATE TABLE `guild_members` (
   `guild_id` int(11) unsigned NOT NULL,
   `char_id` int(11) unsigned NOT NULL,
-  `id` tinyint(4) unsigned DEFAULT NULL,
-  `ranking` tinyint(4) unsigned DEFAULT NULL,
+  `id` tinyint(4) unsigned NOT NULL,
+  `ranking` tinyint(4) unsigned NOT NULL,
   PRIMARY KEY (`guild_id`,`char_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1985,7 +1986,7 @@ DROP TABLE IF EXISTS `guild_score`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `guild_score` (
   `guild_id` int(11) unsigned NOT NULL,
-  `score` bigint(20) DEFAULT NULL,
+  `score` bigint(20) NOT NULL,
   PRIMARY KEY (`guild_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -2000,6 +2001,60 @@ LOCK TABLES `guild_score` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `item_data_my`
+--
+
+DROP TABLE IF EXISTS `item_data_my`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `item_data_my` (
+  `id` int(11) unsigned NOT NULL,
+  `box` tinyint(4) unsigned NOT NULL,
+  `slot` int(11) unsigned NOT NULL,
+  `entry` smallint(6) unsigned NOT NULL,
+  `server` smallint(6) unsigned NOT NULL,
+  `serial` int(11) unsigned NOT NULL,
+  `serial_cash_shop` int(11) unsigned NOT NULL,
+  `level` tinyint(4) unsigned NOT NULL,
+  `durability` tinyint(4) unsigned NOT NULL,
+  `durability_state` int(11) NOT NULL,
+  `skill` tinyint(4) unsigned NOT NULL,
+  `luck` tinyint(4) unsigned NOT NULL,
+  `option` tinyint(4) unsigned NOT NULL,
+  `excellent` tinyint(4) unsigned NOT NULL,
+  `ancient` tinyint(4) unsigned NOT NULL,
+  `option_380` tinyint(4) unsigned NOT NULL,
+  `harmony` tinyint(4) unsigned NOT NULL,
+  `socket_1` smallint(6) unsigned NOT NULL,
+  `socket_2` smallint(6) unsigned NOT NULL,
+  `socket_3` smallint(6) unsigned NOT NULL,
+  `socket_4` smallint(6) unsigned NOT NULL,
+  `socket_5` smallint(6) unsigned NOT NULL,
+  `socket_bonus` tinyint(4) unsigned NOT NULL,
+  `locked` tinyint(4) unsigned NOT NULL,
+  `data_1` int(11) NOT NULL,
+  `data_2` int(11) NOT NULL,
+  `data_3` int(11) NOT NULL,
+  `personal_store_price` int(11) unsigned NOT NULL,
+  `personal_store_job` smallint(6) unsigned NOT NULL,
+  `personal_store_jos` smallint(6) unsigned NOT NULL,
+  `personal_store_joc` smallint(6) unsigned NOT NULL,
+  `expire_date` bigint(20) NOT NULL,
+  `flags` int(11) unsigned NOT NULL,
+  PRIMARY KEY (`id`,`box`,`slot`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `item_data_my`
+--
+
+LOCK TABLES `item_data_my` WRITE;
+/*!40000 ALTER TABLE `item_data_my` DISABLE KEYS */;
+/*!40000 ALTER TABLE `item_data_my` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `item_data`
 --
 
@@ -2007,60 +2062,6 @@ DROP TABLE IF EXISTS `item_data`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `item_data` (
-  `id` int(11) unsigned NOT NULL,
-  `box` tinyint(4) unsigned NOT NULL,
-  `slot` int(11) unsigned NOT NULL,
-  `entry` smallint(6) unsigned DEFAULT NULL,
-  `server` smallint(6) unsigned DEFAULT NULL,
-  `serial` int(11) unsigned DEFAULT NULL,
-  `serial_cash_shop` int(11) unsigned DEFAULT NULL,
-  `level` tinyint(4) unsigned DEFAULT NULL,
-  `durability` tinyint(4) unsigned DEFAULT NULL,
-  `durability_state` int(11) DEFAULT NULL,
-  `skill` tinyint(4) unsigned DEFAULT NULL,
-  `luck` tinyint(4) unsigned DEFAULT NULL,
-  `option` tinyint(4) unsigned DEFAULT NULL,
-  `excellent` tinyint(4) unsigned DEFAULT NULL,
-  `ancient` tinyint(4) unsigned DEFAULT NULL,
-  `option_380` tinyint(4) unsigned DEFAULT NULL,
-  `harmony` tinyint(4) unsigned DEFAULT NULL,
-  `socket_1` smallint(6) unsigned DEFAULT NULL,
-  `socket_2` smallint(6) unsigned DEFAULT NULL,
-  `socket_3` smallint(6) unsigned DEFAULT NULL,
-  `socket_4` smallint(6) unsigned DEFAULT NULL,
-  `socket_5` smallint(6) unsigned DEFAULT NULL,
-  `socket_bonus` tinyint(4) unsigned DEFAULT NULL,
-  `locked` tinyint(4) unsigned DEFAULT NULL,
-  `data_1` int(11) DEFAULT NULL,
-  `data_2` int(11) DEFAULT NULL,
-  `data_3` int(11) DEFAULT NULL,
-  `personal_store_price` int(11) unsigned DEFAULT NULL,
-  `personal_store_job` smallint(6) unsigned DEFAULT NULL,
-  `personal_store_jos` smallint(6) unsigned DEFAULT NULL,
-  `personal_store_joc` smallint(6) unsigned DEFAULT NULL,
-  `expire_date` bigint(20) DEFAULT NULL,
-  `flags` int(11) unsigned DEFAULT NULL,
-  PRIMARY KEY (`id`,`box`,`slot`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `item_data`
---
-
-LOCK TABLES `item_data` WRITE;
-/*!40000 ALTER TABLE `item_data` DISABLE KEYS */;
-/*!40000 ALTER TABLE `item_data` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `item_data_test`
---
-
-DROP TABLE IF EXISTS `item_data_test`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `item_data_test` (
   `id` int(10) unsigned NOT NULL,
   `box` tinyint(3) unsigned NOT NULL,
   `slot` int(10) unsigned NOT NULL,
@@ -2105,12 +2106,12 @@ CREATE TABLE `item_data_test` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `item_data_test`
+-- Dumping data for table `item_data`
 --
 
-LOCK TABLES `item_data_test` WRITE;
-/*!40000 ALTER TABLE `item_data_test` DISABLE KEYS */;
-/*!40000 ALTER TABLE `item_data_test` ENABLE KEYS */;
+LOCK TABLES `item_data` WRITE;
+/*!40000 ALTER TABLE `item_data` DISABLE KEYS */;
+/*!40000 ALTER TABLE `item_data` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -2121,29 +2122,29 @@ DROP TABLE IF EXISTS `item_pentagram_data`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `item_pentagram_data` (
-  `id` int(11) unsigned DEFAULT NULL,
-  `type` tinyint(4) unsigned DEFAULT NULL,
-  `index` tinyint(4) unsigned DEFAULT NULL,
-  `attribute` tinyint(4) unsigned DEFAULT NULL,
-  `item_type` tinyint(4) unsigned DEFAULT NULL,
-  `item_index` smallint(6) unsigned DEFAULT NULL,
-  `item_level` tinyint(4) unsigned DEFAULT NULL,
-  `option_index_rank_1` tinyint(4) unsigned DEFAULT NULL,
-  `option_level_rank_1` tinyint(4) unsigned DEFAULT NULL,
-  `option_index_rank_2` tinyint(4) unsigned DEFAULT NULL,
-  `option_level_rank_2` tinyint(4) unsigned DEFAULT NULL,
-  `option_index_rank_3` tinyint(4) unsigned DEFAULT NULL,
-  `option_level_rank_3` tinyint(4) unsigned DEFAULT NULL,
-  `option_index_rank_4` tinyint(4) unsigned DEFAULT NULL,
-  `option_level_rank_4` tinyint(4) unsigned DEFAULT NULL,
-  `option_index_rank_5` tinyint(4) unsigned DEFAULT NULL,
-  `option_level_rank_5` tinyint(4) unsigned DEFAULT NULL,
-  `serial_server` smallint(6) unsigned DEFAULT NULL,
-  `serial` int(11) unsigned DEFAULT NULL,
-  `flags` int(11) unsigned DEFAULT NULL,
-  `data_1` int(11) DEFAULT NULL,
-  `data_2` int(11) DEFAULT NULL,
-  `data_3` int(11) DEFAULT NULL
+  `id` int(11) unsigned NOT NULL,
+  `type` tinyint(4) unsigned NOT NULL,
+  `index` tinyint(4) unsigned NOT NULL,
+  `attribute` tinyint(4) unsigned NOT NULL,
+  `item_type` tinyint(4) unsigned NOT NULL,
+  `item_index` smallint(6) unsigned NOT NULL,
+  `item_level` tinyint(4) unsigned NOT NULL,
+  `option_index_rank_1` tinyint(4) unsigned NOT NULL,
+  `option_level_rank_1` tinyint(4) unsigned NOT NULL,
+  `option_index_rank_2` tinyint(4) unsigned NOT NULL,
+  `option_level_rank_2` tinyint(4) unsigned NOT NULL,
+  `option_index_rank_3` tinyint(4) unsigned NOT NULL,
+  `option_level_rank_3` tinyint(4) unsigned NOT NULL,
+  `option_index_rank_4` tinyint(4) unsigned NOT NULL,
+  `option_level_rank_4` tinyint(4) unsigned NOT NULL,
+  `option_index_rank_5` tinyint(4) unsigned NOT NULL,
+  `option_level_rank_5` tinyint(4) unsigned NOT NULL,
+  `serial_server` smallint(6) unsigned NOT NULL,
+  `serial` int(11) unsigned NOT NULL,
+  `flags` int(11) unsigned NOT NULL,
+  `data_1` int(11) NOT NULL,
+  `data_2` int(11) NOT NULL,
+  `data_3` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -2166,29 +2167,29 @@ DROP TABLE IF EXISTS `item_recovery`;
 CREATE TABLE `item_recovery` (
   `char_id` int(11) unsigned NOT NULL,
   `item` smallint(6) unsigned NOT NULL,
-  `level` tinyint(4) unsigned DEFAULT NULL,
-  `durability` tinyint(4) unsigned DEFAULT NULL,
-  `skill` tinyint(4) unsigned DEFAULT NULL,
-  `luck` tinyint(4) unsigned DEFAULT NULL,
-  `option` tinyint(4) unsigned DEFAULT NULL,
-  `excellent` tinyint(4) unsigned DEFAULT NULL,
-  `ancient` tinyint(4) unsigned DEFAULT NULL,
-  `harmony` tinyint(4) unsigned DEFAULT NULL,
-  `option_380` tinyint(4) unsigned DEFAULT NULL,
-  `socket_1` smallint(6) unsigned DEFAULT NULL,
-  `socket_2` smallint(6) unsigned DEFAULT NULL,
-  `socket_3` smallint(6) unsigned DEFAULT NULL,
-  `socket_4` smallint(6) unsigned DEFAULT NULL,
-  `socket_5` smallint(6) unsigned DEFAULT NULL,
-  `socket_bonus` tinyint(4) unsigned DEFAULT NULL,
-  `data_1` int(11) DEFAULT NULL,
-  `data_2` int(11) DEFAULT NULL,
-  `data_3` int(11) DEFAULT NULL,
-  `serial_server` smallint(6) unsigned DEFAULT NULL,
-  `serial` int(11) unsigned DEFAULT NULL,
-  `serial_cash_shop` int(11) unsigned DEFAULT NULL,
-  `flags` int(11) unsigned DEFAULT NULL,
-  `id` int(11) unsigned DEFAULT NULL,
+  `level` tinyint(4) unsigned NOT NULL,
+  `durability` tinyint(4) unsigned NOT NULL,
+  `skill` tinyint(4) unsigned NOT NULL,
+  `luck` tinyint(4) unsigned NOT NULL,
+  `option` tinyint(4) unsigned NOT NULL,
+  `excellent` tinyint(4) unsigned NOT NULL,
+  `ancient` tinyint(4) unsigned NOT NULL,
+  `harmony` tinyint(4) unsigned NOT NULL,
+  `option_380` tinyint(4) unsigned NOT NULL,
+  `socket_1` smallint(6) unsigned NOT NULL,
+  `socket_2` smallint(6) unsigned NOT NULL,
+  `socket_3` smallint(6) unsigned NOT NULL,
+  `socket_4` smallint(6) unsigned NOT NULL,
+  `socket_5` smallint(6) unsigned NOT NULL,
+  `socket_bonus` tinyint(4) unsigned NOT NULL,
+  `data_1` int(11) NOT NULL,
+  `data_2` int(11) NOT NULL,
+  `data_3` int(11) NOT NULL,
+  `serial_server` smallint(6) unsigned NOT NULL,
+  `serial` int(11) unsigned NOT NULL,
+  `serial_cash_shop` int(11) unsigned NOT NULL,
+  `flags` int(11) unsigned NOT NULL,
+  `id` int(11) unsigned NOT NULL,
   PRIMARY KEY (`char_id`,`item`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -2212,7 +2213,7 @@ DROP TABLE IF EXISTS `monster_respawn`;
 CREATE TABLE `monster_respawn` (
   `server` smallint(6) unsigned NOT NULL,
   `guid` smallint(6) unsigned NOT NULL,
-  `date` bigint(20) DEFAULT NULL,
+  `date` bigint(20) NOT NULL,
   PRIMARY KEY (`server`,`guid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -2235,7 +2236,7 @@ DROP TABLE IF EXISTS `party`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `party` (
   `guid` smallint(6) unsigned NOT NULL,
-  `server` smallint(6) unsigned DEFAULT NULL,
+  `server` smallint(6) unsigned NOT NULL,
   PRIMARY KEY (`guid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -2257,10 +2258,10 @@ DROP TABLE IF EXISTS `party_member`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `party_member` (
-  `server` smallint(6) unsigned DEFAULT NULL,
-  `party` smallint(6) unsigned DEFAULT NULL,
-  `member` int(11) unsigned DEFAULT NULL,
-  `position` tinyint(4) unsigned DEFAULT NULL
+  `server` smallint(6) unsigned NOT NULL,
+  `party` smallint(6) unsigned NOT NULL,
+  `member` int(11) unsigned NOT NULL,
+  `position` tinyint(4) unsigned NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -2283,11 +2284,11 @@ DROP TABLE IF EXISTS `serial_check`;
 CREATE TABLE `serial_check` (
   `server` smallint(6) unsigned NOT NULL,
   `serial` int(11) unsigned NOT NULL,
-  `type` tinyint(4) unsigned DEFAULT NULL,
-  `account_id` int(11) unsigned DEFAULT NULL,
+  `type` tinyint(4) unsigned NOT NULL,
+  `account_id` int(11) unsigned NOT NULL,
   `ip` varchar(16) DEFAULT NULL,
   `mac` varchar(50) DEFAULT NULL,
-  `disk_serial` int(11) unsigned DEFAULT NULL,
+  `disk_serial` int(11) unsigned NOT NULL,
   PRIMARY KEY (`serial`,`server`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -2310,11 +2311,11 @@ DROP TABLE IF EXISTS `server_signal`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `server_signal` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `server` smallint(6) unsigned DEFAULT NULL,
-  `signal` smallint(6) unsigned DEFAULT NULL,
-  `data_1` int(11) DEFAULT NULL,
-  `data_2` int(11) DEFAULT NULL,
-  `data_3` int(11) DEFAULT NULL,
+  `server` smallint(6) unsigned NOT NULL,
+  `signal` smallint(6) unsigned NOT NULL,
+  `data_1` int(11) NOT NULL,
+  `data_2` int(11) NOT NULL,
+  `data_3` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -2338,9 +2339,9 @@ DROP TABLE IF EXISTS `tormented_square_survival_hall_of_fame`;
 CREATE TABLE `tormented_square_survival_hall_of_fame` (
   `char_id_1` int(11) unsigned NOT NULL,
   `char_name_1` varchar(255) DEFAULT NULL,
-  `char_id_2` int(11) unsigned DEFAULT NULL,
+  `char_id_2` int(11) unsigned NOT NULL,
   `char_name_2` varchar(255) DEFAULT NULL,
-  `score` int(11) DEFAULT NULL,
+  `score` int(11) NOT NULL,
   PRIMARY KEY (`char_id_1`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -2362,13 +2363,13 @@ DROP TABLE IF EXISTS `tormented_square_survival_ranking`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `tormented_square_survival_ranking` (
-  `type` tinyint(4) unsigned DEFAULT NULL,
-  `ranking` int(11) DEFAULT NULL,
-  `char_id_1` int(11) unsigned DEFAULT NULL,
+  `type` tinyint(4) unsigned NOT NULL,
+  `ranking` int(11) NOT NULL,
+  `char_id_1` int(11) unsigned NOT NULL,
   `char_name_1` varchar(255) DEFAULT NULL,
-  `char_id_2` int(11) unsigned DEFAULT NULL,
+  `char_id_2` int(11) unsigned NOT NULL,
   `char_name_2` varchar(255) DEFAULT NULL,
-  `score` int(11) DEFAULT NULL
+  `score` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -2389,11 +2390,11 @@ DROP TABLE IF EXISTS `tormented_square_survival_team`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `tormented_square_survival_team` (
-  `char_id_1` int(11) unsigned DEFAULT NULL,
-  `char_id_2` int(11) unsigned DEFAULT NULL,
-  `score` int(11) DEFAULT NULL,
-  `type` tinyint(4) unsigned DEFAULT NULL,
-  `enter_count` int(11) DEFAULT NULL
+  `char_id_1` int(11) unsigned NOT NULL,
+  `char_id_2` int(11) unsigned NOT NULL,
+  `score` int(11) NOT NULL,
+  `type` tinyint(4) unsigned NOT NULL,
+  `enter_count` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -2415,4 +2416,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-13 12:01:47
+-- Dump completed on 2021-03-14 11:02:21

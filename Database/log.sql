@@ -23,14 +23,14 @@ DROP TABLE IF EXISTS `antihack`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `antihack` (
-  `server` smallint(6) unsigned DEFAULT NULL,
-  `account_id` int(11) unsigned DEFAULT NULL,
+  `server` smallint(6) unsigned NOT NULL,
+  `account_id` int(11) unsigned NOT NULL,
   `account` varchar(255) DEFAULT NULL,
-  `char_id` int(11) unsigned DEFAULT NULL,
+  `char_id` int(11) unsigned NOT NULL,
   `char_name` varchar(255) DEFAULT NULL,
   `player_data` varchar(255) DEFAULT NULL,
   `player_location` varchar(255) DEFAULT NULL,
-  `type` tinyint(4) unsigned DEFAULT NULL,
+  `type` tinyint(4) unsigned NOT NULL,
   `description` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -41,7 +41,6 @@ CREATE TABLE `antihack` (
 
 LOCK TABLES `antihack` WRITE;
 /*!40000 ALTER TABLE `antihack` DISABLE KEYS */;
-INSERT INTO `antihack` VALUES (0,1,'user',1,'test','[{\"server\":0,\"index\":1501,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1501,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1501,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1501,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1501,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1501,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1501,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1501,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1501,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1501,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1501,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',1,'test','[{\"server\":0,\"index\":1501,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":1,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',4,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":4,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',4,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":4,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',4,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":4,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',4,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":4,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',4,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":4,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',4,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":4,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,''),(0,1,'user',4,'test','[{\"server\":0,\"index\":1500,\"ip\":\"192.168.1.60\",\"mac\":\"B4:2E:99:C7:D5:A3\",\"disk_serial\":1519512988,\"acc_id\":1,\"acc\":\"user\",\"char_id\":4,\"char_name\":\"test\",\"world_id\":0,\"world_x\":75,\"world_y\":75,\"world_instance\":-1}]','[LOCATION]0 - - [75/75][LOCATION]',11,'');
 /*!40000 ALTER TABLE `antihack` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -53,18 +52,18 @@ DROP TABLE IF EXISTS `item_bag_serial`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `item_bag_serial` (
-  `serial` int(11) unsigned DEFAULT NULL,
-  `server` smallint(6) unsigned DEFAULT NULL,
+  `serial` int(11) unsigned NOT NULL,
+  `server` smallint(6) unsigned NOT NULL,
   `name` varchar(255) DEFAULT NULL,
-  `level` tinyint(4) unsigned DEFAULT NULL,
-  `account_id` int(11) unsigned DEFAULT NULL,
+  `level` tinyint(4) unsigned NOT NULL,
+  `account_id` int(11) unsigned NOT NULL,
   `account` varchar(255) DEFAULT NULL,
-  `char_id` int(11) unsigned DEFAULT NULL,
+  `char_id` int(11) unsigned NOT NULL,
   `char_name` varchar(255) DEFAULT NULL,
-  `world` smallint(6) unsigned DEFAULT NULL,
-  `world_x` smallint(6) DEFAULT NULL,
-  `world_y` smallint(6) DEFAULT NULL,
-  `instance` int(11) DEFAULT NULL
+  `world` smallint(6) unsigned NOT NULL,
+  `world_x` smallint(6) NOT NULL,
+  `world_y` smallint(6) NOT NULL,
+  `instance` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -85,16 +84,16 @@ DROP TABLE IF EXISTS `log_boss_kill`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_boss_kill` (
-  `boss_index` smallint(6) unsigned DEFAULT NULL,
+  `boss_index` smallint(6) unsigned NOT NULL,
   `boss_name` varchar(255) DEFAULT NULL,
-  `boss_id` tinyint(4) unsigned DEFAULT NULL,
-  `character_id` int(11) unsigned DEFAULT NULL,
+  `boss_id` tinyint(4) unsigned NOT NULL,
+  `character_id` int(11) unsigned NOT NULL,
   `character_name` varchar(255) DEFAULT NULL,
-  `damage` bigint(20) DEFAULT NULL,
-  `damage_reflect` bigint(20) DEFAULT NULL,
-  `damage_debuff` bigint(20) DEFAULT NULL,
-  `damage_elemental` bigint(20) DEFAULT NULL,
-  `server` smallint(6) unsigned DEFAULT NULL,
+  `damage` bigint(20) NOT NULL,
+  `damage_reflect` bigint(20) NOT NULL,
+  `damage_debuff` bigint(20) NOT NULL,
+  `damage_elemental` bigint(20) NOT NULL,
+  `server` smallint(6) unsigned NOT NULL,
   `first_hit` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -116,20 +115,20 @@ DROP TABLE IF EXISTS `log_cash_shop`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_cash_shop` (
-  `server_id` smallint(6) unsigned DEFAULT NULL,
-  `account_id` int(11) unsigned DEFAULT NULL,
+  `server_id` smallint(6) unsigned NOT NULL,
+  `account_id` int(11) unsigned NOT NULL,
   `account` varchar(255) DEFAULT NULL,
-  `char_id` int(11) unsigned DEFAULT NULL,
+  `char_id` int(11) unsigned NOT NULL,
   `char_name` varchar(255) DEFAULT NULL,
   `player_data` varchar(255) DEFAULT NULL,
   `dest_char` varchar(255) DEFAULT NULL,
-  `package_id` int(11) unsigned DEFAULT NULL,
-  `product_id` int(11) unsigned DEFAULT NULL,
-  `option_id` int(11) unsigned DEFAULT NULL,
+  `package_id` int(11) unsigned NOT NULL,
+  `product_id` int(11) unsigned NOT NULL,
+  `option_id` int(11) unsigned NOT NULL,
   `product_name` varchar(255) DEFAULT NULL,
-  `price_type` tinyint(4) unsigned DEFAULT NULL,
-  `price` int(11) unsigned DEFAULT NULL,
-  `gift` tinyint(4) unsigned DEFAULT NULL
+  `price_type` tinyint(4) unsigned NOT NULL,
+  `price` int(11) unsigned NOT NULL,
+  `gift` tinyint(4) unsigned NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -150,15 +149,15 @@ DROP TABLE IF EXISTS `log_errtel_pentagram`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_errtel_pentagram` (
-  `server` smallint(6) unsigned DEFAULT NULL,
-  `account_id` int(11) unsigned DEFAULT NULL,
+  `server` smallint(6) unsigned NOT NULL,
+  `account_id` int(11) unsigned NOT NULL,
   `account` varchar(255) DEFAULT NULL,
-  `char_id` int(11) unsigned DEFAULT NULL,
+  `char_id` int(11) unsigned NOT NULL,
   `char_name` varchar(255) DEFAULT NULL,
   `player_data` varchar(255) DEFAULT NULL,
-  `type` tinyint(4) unsigned DEFAULT NULL,
-  `blessing_spirit` tinyint(4) unsigned DEFAULT NULL,
-  `result` tinyint(4) unsigned DEFAULT NULL,
+  `type` tinyint(4) unsigned NOT NULL,
+  `blessing_spirit` tinyint(4) unsigned NOT NULL,
+  `result` tinyint(4) unsigned NOT NULL,
   `pentagram_data` varchar(255) DEFAULT NULL,
   `errtel_data` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -181,10 +180,10 @@ DROP TABLE IF EXISTS `log_item_buy`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_item_buy` (
-  `server` smallint(6) unsigned DEFAULT NULL,
-  `account_id` int(11) unsigned DEFAULT NULL,
+  `server` smallint(6) unsigned NOT NULL,
+  `account_id` int(11) unsigned NOT NULL,
   `account` varchar(255) DEFAULT NULL,
-  `char_id` int(11) unsigned DEFAULT NULL,
+  `char_id` int(11) unsigned NOT NULL,
   `char_name` varchar(255) DEFAULT NULL,
   `player_data` varchar(255) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL,
@@ -209,19 +208,19 @@ DROP TABLE IF EXISTS `log_item_create`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_item_create` (
-  `account_id` int(11) unsigned DEFAULT NULL,
+  `account_id` int(11) unsigned NOT NULL,
   `account` varchar(255) DEFAULT NULL,
-  `char_id` int(11) unsigned DEFAULT NULL,
+  `char_id` int(11) unsigned NOT NULL,
   `char_name` varchar(255) DEFAULT NULL,
   `interface_id` varchar(255) DEFAULT NULL,
-  `world` smallint(6) unsigned DEFAULT NULL,
-  `world_x` smallint(6) DEFAULT NULL,
-  `world_y` smallint(6) DEFAULT NULL,
-  `server` smallint(6) unsigned DEFAULT NULL,
-  `serial` int(11) unsigned DEFAULT NULL,
-  `serial_shop` int(11) unsigned DEFAULT NULL,
-  `item` smallint(6) unsigned DEFAULT NULL,
-  `level` tinyint(4) unsigned DEFAULT NULL,
+  `world` smallint(6) unsigned NOT NULL,
+  `world_x` smallint(6) NOT NULL,
+  `world_y` smallint(6) NOT NULL,
+  `server` smallint(6) unsigned NOT NULL,
+  `serial` int(11) unsigned NOT NULL,
+  `serial_shop` int(11) unsigned NOT NULL,
+  `item` smallint(6) unsigned NOT NULL,
+  `level` tinyint(4) unsigned NOT NULL,
   `item_data` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -243,10 +242,10 @@ DROP TABLE IF EXISTS `log_item_drop`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_item_drop` (
-  `server` smallint(6) unsigned DEFAULT NULL,
-  `account_id` int(11) unsigned DEFAULT NULL,
+  `server` smallint(6) unsigned NOT NULL,
+  `account_id` int(11) unsigned NOT NULL,
   `account` varchar(255) DEFAULT NULL,
-  `char_id` int(11) unsigned DEFAULT NULL,
+  `char_id` int(11) unsigned NOT NULL,
   `char_name` varchar(255) DEFAULT NULL,
   `player_data` varchar(255) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL,
@@ -271,10 +270,10 @@ DROP TABLE IF EXISTS `log_item_loot`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_item_loot` (
-  `server` smallint(6) unsigned DEFAULT NULL,
-  `account_id` int(11) unsigned DEFAULT NULL,
+  `server` smallint(6) unsigned NOT NULL,
+  `account_id` int(11) unsigned NOT NULL,
   `account` varchar(255) DEFAULT NULL,
-  `char_id` int(11) unsigned DEFAULT NULL,
+  `char_id` int(11) unsigned NOT NULL,
   `char_name` varchar(255) DEFAULT NULL,
   `player_data` varchar(255) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL,
@@ -299,10 +298,10 @@ DROP TABLE IF EXISTS `log_item_sell`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_item_sell` (
-  `server` smallint(6) unsigned DEFAULT NULL,
-  `account_id` int(11) unsigned DEFAULT NULL,
+  `server` smallint(6) unsigned NOT NULL,
+  `account_id` int(11) unsigned NOT NULL,
   `account` varchar(255) DEFAULT NULL,
-  `char_id` int(11) unsigned DEFAULT NULL,
+  `char_id` int(11) unsigned NOT NULL,
   `char_name` varchar(255) DEFAULT NULL,
   `player_data` varchar(255) DEFAULT NULL,
   `item_data` varchar(255) DEFAULT NULL,
@@ -327,14 +326,14 @@ DROP TABLE IF EXISTS `log_jewel_drop`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_jewel_drop` (
-  `char_id` int(11) unsigned DEFAULT NULL,
-  `account_id` int(11) unsigned DEFAULT NULL,
-  `jewel_type` tinyint(4) unsigned DEFAULT NULL,
-  `jewel_index` smallint(6) unsigned DEFAULT NULL,
+  `char_id` int(11) unsigned NOT NULL,
+  `account_id` int(11) unsigned NOT NULL,
+  `jewel_type` tinyint(4) unsigned NOT NULL,
+  `jewel_index` smallint(6) unsigned NOT NULL,
   `jewel_name` varchar(255) DEFAULT NULL,
-  `world` smallint(6) unsigned DEFAULT NULL,
-  `x` smallint(6) DEFAULT NULL,
-  `y` smallint(6) DEFAULT NULL
+  `world` smallint(6) unsigned NOT NULL,
+  `x` smallint(6) NOT NULL,
+  `y` smallint(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -355,12 +354,12 @@ DROP TABLE IF EXISTS `log_jewel_mix`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_jewel_mix` (
-  `char_id` int(11) unsigned DEFAULT NULL,
+  `char_id` int(11) unsigned NOT NULL,
   `char_name` varchar(255) DEFAULT NULL,
-  `server` smallint(6) unsigned DEFAULT NULL,
-  `mix_type` tinyint(4) unsigned DEFAULT NULL,
-  `mix_id` tinyint(4) unsigned DEFAULT NULL,
-  `mix_level` tinyint(4) unsigned DEFAULT NULL
+  `server` smallint(6) unsigned NOT NULL,
+  `mix_type` tinyint(4) unsigned NOT NULL,
+  `mix_id` tinyint(4) unsigned NOT NULL,
+  `mix_level` tinyint(4) unsigned NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -381,15 +380,15 @@ DROP TABLE IF EXISTS `log_level_up`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_level_up` (
-  `char_id` int(11) unsigned DEFAULT NULL,
+  `char_id` int(11) unsigned NOT NULL,
   `char_name` varchar(255) DEFAULT NULL,
-  `level_normal` smallint(6) unsigned DEFAULT NULL,
-  `level_master` smallint(6) unsigned DEFAULT NULL,
-  `level_majestic` smallint(6) unsigned DEFAULT NULL,
-  `world` smallint(6) unsigned DEFAULT NULL,
-  `world_x` smallint(6) DEFAULT NULL,
-  `world_y` smallint(6) DEFAULT NULL,
-  `event_ground` tinyint(4) DEFAULT NULL
+  `level_normal` smallint(6) unsigned NOT NULL,
+  `level_master` smallint(6) unsigned NOT NULL,
+  `level_majestic` smallint(6) unsigned NOT NULL,
+  `world` smallint(6) unsigned NOT NULL,
+  `world_x` smallint(6) NOT NULL,
+  `world_y` smallint(6) NOT NULL,
+  `event_ground` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -410,17 +409,17 @@ DROP TABLE IF EXISTS `log_mix`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_mix` (
-  `server` smallint(6) unsigned DEFAULT NULL,
-  `account_id` int(11) unsigned DEFAULT NULL,
+  `server` smallint(6) unsigned NOT NULL,
+  `account_id` int(11) unsigned NOT NULL,
   `account` varchar(255) DEFAULT NULL,
-  `char_id` int(11) unsigned DEFAULT NULL,
+  `char_id` int(11) unsigned NOT NULL,
   `char_name` varchar(255) DEFAULT NULL,
   `player_data` varchar(255) DEFAULT NULL,
-  `mix_id` smallint(6) unsigned DEFAULT NULL,
+  `mix_id` smallint(6) unsigned NOT NULL,
   `mix_name` varchar(255) DEFAULT NULL,
-  `rate` int(11) DEFAULT NULL,
-  `cost` int(11) unsigned DEFAULT NULL,
-  `result` tinyint(4) unsigned DEFAULT NULL,
+  `rate` int(11) NOT NULL,
+  `cost` int(11) unsigned NOT NULL,
+  `result` tinyint(4) unsigned NOT NULL,
   `item_data_before` varchar(255) DEFAULT NULL,
   `item_data_after` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -443,18 +442,18 @@ DROP TABLE IF EXISTS `log_personal_store`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_personal_store` (
-  `server` smallint(6) unsigned DEFAULT NULL,
-  `account_id_01` int(11) unsigned DEFAULT NULL,
+  `server` smallint(6) unsigned NOT NULL,
+  `account_id_01` int(11) unsigned NOT NULL,
   `account_01` varchar(255) DEFAULT NULL,
-  `char_id_01` int(11) unsigned DEFAULT NULL,
+  `char_id_01` int(11) unsigned NOT NULL,
   `char_name_01` varchar(255) DEFAULT NULL,
   `player_data_01` varchar(255) DEFAULT NULL,
-  `account_id_02` int(11) unsigned DEFAULT NULL,
+  `account_id_02` int(11) unsigned NOT NULL,
   `account_02` varchar(255) DEFAULT NULL,
-  `char_id_02` int(11) unsigned DEFAULT NULL,
+  `char_id_02` int(11) unsigned NOT NULL,
   `char_name_02` varchar(255) DEFAULT NULL,
   `player_data_02` varchar(255) DEFAULT NULL,
-  `offstore` tinyint(4) unsigned DEFAULT NULL,
+  `offstore` tinyint(4) unsigned NOT NULL,
   `item_data` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -476,19 +475,19 @@ DROP TABLE IF EXISTS `log_pvp`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_pvp` (
-  `char_id_1` int(11) unsigned DEFAULT NULL,
+  `char_id_1` int(11) unsigned NOT NULL,
   `char_name_1` varchar(255) DEFAULT NULL,
-  `char_class_1` tinyint(4) unsigned DEFAULT NULL,
+  `char_class_1` tinyint(4) unsigned NOT NULL,
   `char_stat_1` varchar(255) DEFAULT NULL,
   `char_set_1` varchar(255) DEFAULT NULL,
-  `char_id_2` int(11) unsigned DEFAULT NULL,
+  `char_id_2` int(11) unsigned NOT NULL,
   `char_name_2` varchar(255) DEFAULT NULL,
-  `char_class_2` tinyint(4) unsigned DEFAULT NULL,
+  `char_class_2` tinyint(4) unsigned NOT NULL,
   `char_stat_2` varchar(255) DEFAULT NULL,
   `char_set_2` varchar(255) DEFAULT NULL,
-  `skill` smallint(5) unsigned DEFAULT NULL,
-  `hp_damage` int(11) DEFAULT NULL,
-  `sd_damage` int(11) DEFAULT NULL
+  `skill` smallint(5) unsigned NOT NULL,
+  `hp_damage` int(11) NOT NULL,
+  `sd_damage` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -509,18 +508,18 @@ DROP TABLE IF EXISTS `log_trade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `log_trade` (
-  `server` smallint(6) unsigned DEFAULT NULL,
-  `account_id_01` int(11) unsigned DEFAULT NULL,
+  `server` smallint(6) unsigned NOT NULL,
+  `account_id_01` int(11) unsigned NOT NULL,
   `account_01` varchar(255) DEFAULT NULL,
-  `char_id_01` int(11) unsigned DEFAULT NULL,
+  `char_id_01` int(11) unsigned NOT NULL,
   `char_name_01` varchar(255) DEFAULT NULL,
   `player_data_01` varchar(255) DEFAULT NULL,
-  `account_id_02` int(11) unsigned DEFAULT NULL,
+  `account_id_02` int(11) unsigned NOT NULL,
   `account_02` varchar(255) DEFAULT NULL,
-  `char_id_02` int(11) unsigned DEFAULT NULL,
+  `char_id_02` int(11) unsigned NOT NULL,
   `char_name_02` varchar(255) DEFAULT NULL,
   `player_data_02` varchar(255) DEFAULT NULL,
-  `money` int(11) unsigned DEFAULT NULL,
+  `money` int(11) unsigned NOT NULL,
   `item_data` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -542,13 +541,13 @@ DROP TABLE IF EXISTS `mix_recovery`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `mix_recovery` (
-  `server` smallint(6) unsigned DEFAULT NULL,
-  `account_id` int(11) unsigned DEFAULT NULL,
+  `server` smallint(6) unsigned NOT NULL,
+  `account_id` int(11) unsigned NOT NULL,
   `account` varchar(255) DEFAULT NULL,
-  `char_id` int(11) unsigned DEFAULT NULL,
+  `char_id` int(11) unsigned NOT NULL,
   `char_name` varchar(255) DEFAULT NULL,
   `player_data` varchar(255) DEFAULT NULL,
-  `type` tinyint(4) unsigned DEFAULT NULL,
+  `type` tinyint(4) unsigned NOT NULL,
   `item_data` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -570,13 +569,13 @@ DROP TABLE IF EXISTS `reward_dungeon`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `reward_dungeon` (
-  `server` smallint(6) unsigned DEFAULT NULL,
-  `account_id` int(11) unsigned DEFAULT NULL,
+  `server` smallint(6) unsigned NOT NULL,
+  `account_id` int(11) unsigned NOT NULL,
   `account` varchar(255) DEFAULT NULL,
-  `char_id` int(11) unsigned DEFAULT NULL,
+  `char_id` int(11) unsigned NOT NULL,
   `char_name` varchar(255) DEFAULT NULL,
   `player_data` varchar(255) DEFAULT NULL,
-  `type` tinyint(4) unsigned DEFAULT NULL,
+  `type` tinyint(4) unsigned NOT NULL,
   `item_data` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -598,11 +597,11 @@ DROP TABLE IF EXISTS `reward_labyrinth_of_dimensions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `reward_labyrinth_of_dimensions` (
-  `server` smallint(6) unsigned DEFAULT NULL,
-  `char_id` int(11) unsigned DEFAULT NULL,
+  `server` smallint(6) unsigned NOT NULL,
+  `char_id` int(11) unsigned NOT NULL,
   `char_name` varchar(255) DEFAULT NULL,
-  `category` tinyint(4) unsigned DEFAULT NULL,
-  `rank` int(11) DEFAULT NULL,
+  `category` tinyint(4) unsigned NOT NULL,
+  `rank` int(11) NOT NULL,
   `item_data` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -625,4 +624,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-13 12:02:19
+-- Dump completed on 2021-03-14 11:10:37
